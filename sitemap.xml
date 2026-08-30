@@ -3,7 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://runetan.github.io/</loc>
-    <lastmod>2024-05-28T00:00:00+00:00</lastmod>
+    <lastmod>2026-08-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://runetan.github.io/about/</loc>
+    <lastmod>2026-08-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://runetan.github.io/cv/</loc>
+    <lastmod>2026-08-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://runetan.github.io/categories/</loc>
     <lastmod>2024-05-28T00:00:00+00:00</lastmod>
@@ -142,8 +148,5 @@
   </url><url>
     <loc>https://runetan.github.io/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://runetan.github.io/about/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url>
 </urlset>

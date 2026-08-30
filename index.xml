@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>RuneTan</title>
+    <title>Zili Tan</title>
     <link>https://runetan.github.io/</link>
-    <description>Recent content on RuneTan</description>
+    <description>Recent content on Zili Tan</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright 2024-2077(even more), Rune</copyright>
-    <lastBuildDate>Tue, 28 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://runetan.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://runetan.github.io/about/</link>
+      <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>https://runetan.github.io/about/</guid>
+      <description>简介 / Introduction 我是谭子立（Zili Tan），中山大学物理学学士，现为阿姆斯特丹大学 Physics and Astronomy 联合硕士生（理论物理方向）。研究兴趣为量子引力、量子宇宙学、暴胀，以及面向高能理论的人工智能方法。&#xA;I am Zili Tan, BSc in Physics from Sun Yat-sen University and currently an MSc student in the joint Physics and Astronomy programme (Theoretical Physics track) at the University of Amsterdam. My research interests are quantum gravity, quantum cosmology, inflation, and AI for high-energy theory (hep-th).&#xA;E-mail: zili.tan@student.uva.nl&#xA;Education University of Amsterdam, The Netherlands — MSc Physics and Astronomy (joint degree), Theoretical Physics track, 09/2025 – 06/2027 (expected).</description>
+    </item>
+    <item>
+      <title>CV</title>
+      <link>https://runetan.github.io/cv/</link>
+      <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>https://runetan.github.io/cv/</guid>
+      <description>Zili Tan · zili.tan@student.uva.nl · runetan.github.io&#xA;Education University of Amsterdam, The Netherlands — MSc Physics and Astronomy (joint degree), Theoretical Physics track, 09/2025 – 06/2027 (expected).&#xA;GPA: 4.0/4.0 Sun Yat-sen University, Guangzhou, China — BSc Physics, 09/2021 – 07/2025.&#xA;GPA: 3.7/4.0 Honors: Third Class Scholarship (10/2022) Research Interests Quantum gravity, quantum cosmology, inflation, and AI for high-energy theory (hep-th).&#xA;Research Experience Observer-Relative Inflationary Histories in de Sitter JT Gravity Advisors: Prof.</description>
+    </item>
     <item>
       <title>Early universe 1.5</title>
       <link>https://runetan.github.io/post/cos/3/</link>
@@ -260,13 +274,6 @@
       <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
       <guid>https://runetan.github.io/archives/</guid>
       <description>这个似乎没什么用</description>
-    </item>
-    <item>
-      <title>About</title>
-      <link>https://runetan.github.io/about/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>https://runetan.github.io/about/</guid>
-      <description>E-mail：tanzli@mail2.sysu.edu.cn&#xA;我在大创项目中对暴胀宇宙学进行了调研，有PPT共8篇，并对Coleman的QFT讲义前20节做了notes（见categories）。&#xA;I have researched Standard Cosmology&amp;amp;Inflation in the Undergraduate Entrepreneurship Program, have PPTs totalling 8, and have made NOTES on the first 20 sections of Coleman&amp;rsquo;s QFT Lectures (see CATEGORIES).&#xA;此外，我还是摄影爱好者，我把我觉得放拍的好看的照片放到了Photos里面。&#xA;In addition, I&amp;rsquo;m a photography enthusiast, so here are a few photos I&amp;rsquo;ve taken in &amp;ldquo;Photos&amp;rdquo; category.</description>
     </item>
   </channel>
 </rss>
