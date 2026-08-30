@@ -1,9 +1,44 @@
 <!doctype html>
-<html lang="en-us"><head>
+<html lang="en"><head>
     <title>Zili Tan</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="notes of QFT Lecture by Coleman" />
+
+    
+    <script>
+    (function(){try{var t=localStorage.getItem('theme');if(!t&&window.matchMedia){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+    </script>
+    
+<style>
+html[data-theme="dark"] body { background-color: #14171f; color: #d7dce3; }
+html[data-theme="dark"] a { color: #8ab4f8; }
+html[data-theme="dark"] header h2 a,
+html[data-theme="dark"] header h2 a:hover { color: #e8ecf2; }
+html[data-theme="dark"] .text-muted { color: #9aa3ad !important; }
+html[data-theme="dark"] hr { background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(200,205,215,.35), rgba(200,205,215,.45), rgba(200,205,215,.35), rgba(255,255,255,0)); }
+html[data-theme="dark"] blockquote { background: #1b2029; border-left-color: #4a5362; }
+html[data-theme="dark"] blockquote:before { color: #5b6472; }
+html[data-theme="dark"] .badge.category,
+html[data-theme="dark"] .category { color: #14171f; background-color: #d7dce3; }
+html[data-theme="dark"] .badge-white { color: #d7dce3 !important; }
+html[data-theme="dark"] .highlight > pre,
+html[data-theme="dark"] pre,
+html[data-theme="dark"] code { color: #e8b08a; }
+html[data-theme="dark"] .highlight > pre { background: #1b2029; border-color: #3a4250; }
+html[data-theme="dark"] .pdf-loading { border-color: #3a4250; border-top-color: #d7dce3; }
+html[data-theme="dark"] #overlayText a { color: #e8ecf2; background-color: #232a37; border-color: #4a5362; }
+html[data-theme="dark"] .pdf-paginator button { background: #232a37; color: #d7dce3; border-color: #4a5362; }
+html[data-theme="dark"] .katex { color: #d7dce3; }
+html[data-theme="dark"] img { border: 1px solid #2c3340; }
+
+.site-controls { position: fixed; top: 12px; right: 14px; z-index: 999; display: flex; gap: 8px; }
+.control-btn { display: inline-flex; align-items: center; justify-content: center; min-width: 36px; height: 30px; padding: 0 10px; border: 1px solid rgba(127,127,127,.45); border-radius: 15px; background: transparent; color: inherit; font-size: 0.85rem; text-decoration: none !important; cursor: pointer; }
+.control-btn:hover { border-color: rgba(127,127,127,.9); }
+html[data-theme="light"] #theme-toggle::after { content: "🌙"; }
+html[data-theme="dark"] #theme-toggle::after { content: "☀️"; }
+</style>
+
 
     
     
@@ -20,7 +55,8 @@
 
 </head>
 <body>
-        <div id="content" class="mx-auto"><header class="container mt-sm-5 mt-4 mb-4 mt-xs-1">
+        <div id="content" class="mx-auto"><header class="container mt-sm-5 mt-4 mb-4 mt-xs-1"><div class="site-controls">
+        <button id="theme-toggle" class="control-btn" type="button" aria-label="Toggle dark mode" title="Toggle dark mode"></button><a class="control-btn" href="/zh/post/qftnotes/6/">中文</a></div>
     <div class="row">
         
         <div class="col-sm-4 col-12 text-sm-right text-center pt-sm-4">
@@ -183,36 +219,36 @@
   @-webkit-keyframes spin {
     to { -webkit-transform: rotate(360deg); }
   }
-  </style><div class="embed-pdf-container" id="embed-pdf-container-6d0b7a9a">
-    <div class="pdf-loadingWrapper" id="pdf-loadingWrapper-6d0b7a9a">
-        <div class="pdf-loading" id="pdf-loading-6d0b7a9a"></div>
+  </style><div class="embed-pdf-container" id="embed-pdf-container-59479752">
+    <div class="pdf-loadingWrapper" id="pdf-loadingWrapper-59479752">
+        <div class="pdf-loading" id="pdf-loading-59479752"></div>
     </div>
     <div id="overlayText">
-      <a href="https://file.runetan.site/QFT%20Lecture%206.pdf" aria-label="Download" download>
+      <a href="/files/qft/qft-lecture-6.pdf" aria-label="Download" download>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
             <path d="M9 13c.3 0 .5-.1.7-.3L15.4 7 14 5.6l-4 4V1H8v8.6l-4-4L2.6 7l5.7 5.7c.2.2.4.3.7.3zm-7 2h14v2H2z" />
         </svg>
       </a>
     </div>
-    <canvas class="pdf-canvas" id="pdf-canvas-6d0b7a9a"></canvas>
+    <canvas class="pdf-canvas" id="pdf-canvas-59479752"></canvas>
 </div>
 
-<div class="pdf-paginator" id="pdf-paginator-6d0b7a9a">
-    <button id="pdf-prev-6d0b7a9a">Previous</button>
-    <button id="pdf-next-6d0b7a9a">Next</button> &nbsp; &nbsp;
+<div class="pdf-paginator" id="pdf-paginator-59479752">
+    <button id="pdf-prev-59479752">Previous</button>
+    <button id="pdf-next-59479752">Next</button> &nbsp; &nbsp;
     <span>
-      <span class="pdf-pagenum" id="pdf-pagenum-6d0b7a9a"></span> / <span class="pdf-pagecount" id="pdf-pagecount-6d0b7a9a"></span>
+      <span class="pdf-pagenum" id="pdf-pagenum-59479752"></span> / <span class="pdf-pagecount" id="pdf-pagecount-59479752"></span>
     </span>
-    <a class="pdf-source" id="pdf-source-6d0b7a9a" href="https://file.runetan.site/QFT%20Lecture%206.pdf">[pdf]</a>
+    <a class="pdf-source" id="pdf-source-59479752" href="/files/qft/qft-lecture-6.pdf">[pdf]</a>
 </div>
 
 <noscript>
-View the PDF file <a class="pdf-source" id="pdf-source-noscript-6d0b7a9a" href="https://file.runetan.site/QFT%20Lecture%206.pdf">here</a>.
+View the PDF file <a class="pdf-source" id="pdf-source-noscript-59479752" href="/files/qft/qft-lecture-6.pdf">here</a>.
 </noscript>
 
 <script type="text/javascript">
     (function(){
-    var url = 'https:\/\/file.runetan.site\/QFT%20Lecture%206.pdf';
+    var url = '\/files\/qft\/qft-lecture-6.pdf';
 
     var hidePaginator = "" === "true";
     var hideLoader = "" === "true";
@@ -223,7 +259,7 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-6d0b7a9a" href="
 
     
     if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
-      pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/runetan.github.io\/" + 'js/pdf-js/build/pdf.worker.js';
+      pdfjsLib.GlobalWorkerOptions.workerSrc = "https://runetan.github.io/js/pdf-js/build/pdf.worker.js";
 
     
     var pdfDoc = null,
@@ -231,10 +267,10 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-6d0b7a9a" href="
         pageRendering = false,
         pageNumPending = null,
         scale = 3,
-        canvas = document.getElementById('pdf-canvas-6d0b7a9a'),
+        canvas = document.getElementById('pdf-canvas-59479752'),
         ctx = canvas.getContext('2d'),
-        paginator = document.getElementById("pdf-paginator-6d0b7a9a"),
-        loadingWrapper = document.getElementById('pdf-loadingWrapper-6d0b7a9a');
+        paginator = document.getElementById("pdf-paginator-59479752"),
+        loadingWrapper = document.getElementById('pdf-loadingWrapper-59479752');
 
 
     
@@ -272,7 +308,7 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-6d0b7a9a" href="
       });
 
       
-      document.getElementById('pdf-pagenum-6d0b7a9a').textContent = num;
+      document.getElementById('pdf-pagenum-59479752').textContent = num;
     }
 
     
@@ -316,7 +352,7 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-6d0b7a9a" href="
       pageNum--;
       queueRenderPage(pageNum);
     }
-    document.getElementById('pdf-prev-6d0b7a9a').addEventListener('click', onPrevPage);
+    document.getElementById('pdf-prev-59479752').addEventListener('click', onPrevPage);
 
     
 
@@ -327,14 +363,14 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-6d0b7a9a" href="
       pageNum++;
       queueRenderPage(pageNum);
     }
-    document.getElementById('pdf-next-6d0b7a9a').addEventListener('click', onNextPage);
+    document.getElementById('pdf-next-59479752').addEventListener('click', onNextPage);
 
     
 
     pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
       pdfDoc = pdfDoc_;
       var numPages = pdfDoc.numPages;
-      document.getElementById('pdf-pagecount-6d0b7a9a').textContent = numPages;
+      document.getElementById('pdf-pagecount-59479752').textContent = numPages;
 
       
       if(pageNum > numPages) {
@@ -378,6 +414,18 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-6d0b7a9a" href="
     });
   });
 </script>
+<script>
+(function(){
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', function(){
+    var cur = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', cur);
+    try { localStorage.setItem('theme', cur); } catch(e) {}
+  });
+})();
+</script>
+
 </footer>
 </body>
 </html>
