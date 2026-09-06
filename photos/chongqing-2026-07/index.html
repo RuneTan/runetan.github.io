@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en"><head>
+    <title>Zili Tan</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+
+    
+    <script>
+    (function(){try{var t=localStorage.getItem('theme');if(!t&&window.matchMedia){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+    </script>
+    
+<style>
+html[data-theme="dark"] body { background-color: #14171f; color: #d7dce3; }
+html[data-theme="dark"] a { color: #8ab4f8; }
+html[data-theme="dark"] header h2 a,
+html[data-theme="dark"] header h2 a:hover { color: #e8ecf2; }
+html[data-theme="dark"] .text-muted { color: #9aa3ad !important; }
+html[data-theme="dark"] hr { background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(200,205,215,.35), rgba(200,205,215,.45), rgba(200,205,215,.35), rgba(255,255,255,0)); }
+html[data-theme="dark"] blockquote { background: #1b2029; border-left-color: #4a5362; }
+html[data-theme="dark"] blockquote:before { color: #5b6472; }
+html[data-theme="dark"] .badge.category,
+html[data-theme="dark"] .category { color: #14171f; background-color: #d7dce3; }
+html[data-theme="dark"] .badge-white { color: #d7dce3 !important; }
+html[data-theme="dark"] .highlight > pre,
+html[data-theme="dark"] pre,
+html[data-theme="dark"] code { color: #e8b08a; }
+html[data-theme="dark"] .highlight > pre { background: #1b2029; border-color: #3a4250; }
+html[data-theme="dark"] .pdf-loading { border-color: #3a4250; border-top-color: #d7dce3; }
+html[data-theme="dark"] #overlayText a { color: #e8ecf2; background-color: #232a37; border-color: #4a5362; }
+html[data-theme="dark"] .pdf-paginator button { background: #232a37; color: #d7dce3; border-color: #4a5362; }
+html[data-theme="dark"] .katex { color: #d7dce3; }
+html[data-theme="dark"] img { border: 1px solid #2c3340; }
+
+.site-controls { position: fixed; top: 12px; right: 14px; z-index: 999; display: flex; gap: 8px; }
+.control-btn { display: inline-flex; align-items: center; justify-content: center; min-width: 36px; height: 30px; padding: 0 10px; border: 1px solid rgba(127,127,127,.45); border-radius: 15px; background: transparent; color: inherit; font-size: 0.85rem; text-decoration: none !important; cursor: pointer; }
+.control-btn:hover { border-color: rgba(127,127,127,.9); }
+html[data-theme="light"] #theme-toggle::after { content: "🌙"; }
+html[data-theme="dark"] #theme-toggle::after { content: "☀️"; }
+
+ 
+.gallery-album { margin-bottom: 2.4rem; }
+.gallery-album-head { display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 0.6rem; }
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.gallery-item { display: block; }
+.gallery-item img { width: 100%; height: 130px; object-fit: cover; display: block; border-radius: 0.2rem; }
+.lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 1000; display: flex; align-items: center; justify-content: center; }
+.lightbox img { max-width: 94vw; max-height: 90vh; border-radius: 0.2rem; }
+.lb-btn { position: absolute; background: rgba(255,255,255,0.16); color: #fff; border: none; border-radius: 8px; font-size: 1.7rem; line-height: 1; width: 46px; height: 46px; cursor: pointer; }
+.lb-btn:hover { background: rgba(255,255,255,0.3); }
+.lb-close { top: 16px; right: 16px; }
+.lb-prev { left: 14px; top: 50%; transform: translateY(-50%); }
+.lb-next { right: 14px; top: 50%; transform: translateY(-50%); }
+</style>
+
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/theme.min.css">
+
+    
+    
+    
+
+    
+  
+
+
+</head>
+<body>
+        <div id="content" class="mx-auto"><header class="container mt-sm-5 mt-4 mb-4 mt-xs-1"><div class="site-controls">
+        <button id="theme-toggle" class="control-btn" type="button" aria-label="Toggle dark mode" title="Toggle dark mode"></button><a class="control-btn" href="/zh/photos/chongqing-2026-07/">中文</a></div>
+    <div class="row">
+        
+        <div class="col-sm-4 col-12 text-sm-right text-center pt-sm-4">
+            <a href="/" class="text-decoration-none">
+                <img id="home-image" class="rounded-circle"
+                    
+                        
+                            src="/images/avatar.jpg"
+                        
+                    
+                />
+            </a>
+        </div>
+        <div class="col-sm-8 col-12 text-sm-left text-center">
+        
+            <h2 class="m-0 mb-2 mt-4">
+                <a href="/" class="text-decoration-none">
+                    
+                        Zili Tan
+                    
+                </a>
+            </h2>
+            <p class="text-muted mb-1">
+                
+                    University of Amsterdam, The Netherlands
+                
+            </p>
+            <ul id="nav-links" class="list-inline mb-2">
+                
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white " href="/cv/" title="CV">CV</a>
+                    </li>
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white " href="/post/" title="Posts">Posts</a>
+                    </li>
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white " href="/photos/" title="Photos">Photos</a>
+                    </li>
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white " href="/categories/" title="Categories">Categories</a>
+                    </li>
+                
+            </ul>
+            <ul id="nav-social" class="list-inline">
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="https://github.com/RuneTan" target="_blank">
+                            <i class="fab fa-github fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="mailto:zili.tan@student.uva.nl" target="_blank">
+                            <i class="fa-solid fa-envelope fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+    <hr />
+</header>
+<div class="container">
+    <div class="pl-sm-4 ml-sm-5">
+        
+    </div>
+
+    
+
+            </div>
+        </div><footer class="text-center pb-1">
+    <small class="text-muted">
+        
+            &copy; 2024-2026 Zili Tan
+        
+        <br>
+        Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a>
+    </small>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: '\\[', right: '\\]', display: true},   
+        {left: '$$', right: '$$', display: true},     
+        {left: '$', right: '$', display: false},  
+        {left: '\\(', right: '\\)', display: false},  
+      ],
+      throwOnError : false
+    });
+  });
+</script>
+<script>
+(function(){
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', function(){
+    var cur = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', cur);
+    try { localStorage.setItem('theme', cur); } catch(e) {}
+  });
+})();
+</script>
+
+</footer>
+</body>
+</html>

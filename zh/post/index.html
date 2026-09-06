@@ -37,6 +37,20 @@ html[data-theme="dark"] img { border: 1px solid #2c3340; }
 .control-btn:hover { border-color: rgba(127,127,127,.9); }
 html[data-theme="light"] #theme-toggle::after { content: "🌙"; }
 html[data-theme="dark"] #theme-toggle::after { content: "☀️"; }
+
+ 
+.gallery-album { margin-bottom: 2.4rem; }
+.gallery-album-head { display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 0.6rem; }
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.gallery-item { display: block; }
+.gallery-item img { width: 100%; height: 130px; object-fit: cover; display: block; border-radius: 0.2rem; }
+.lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 1000; display: flex; align-items: center; justify-content: center; }
+.lightbox img { max-width: 94vw; max-height: 90vh; border-radius: 0.2rem; }
+.lb-btn { position: absolute; background: rgba(255,255,255,0.16); color: #fff; border: none; border-radius: 8px; font-size: 1.7rem; line-height: 1; width: 46px; height: 46px; cursor: pointer; }
+.lb-btn:hover { background: rgba(255,255,255,0.3); }
+.lb-close { top: 16px; right: 16px; }
+.lb-prev { left: 14px; top: 50%; transform: translateY(-50%); }
+.lb-next { right: 14px; top: 50%; transform: translateY(-50%); }
 </style>
 
 
@@ -93,6 +107,10 @@ html[data-theme="dark"] #theme-toggle::after { content: "☀️"; }
                 
                     <li class="list-inline-item">
                         <a class="badge badge-white " href="/zh/post/" title="文章">文章</a>
+                    </li>
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white " href="/zh/photos/" title="照片">照片</a>
                     </li>
                 
                     <li class="list-inline-item">
@@ -169,52 +187,6 @@ html[data-theme="dark"] #theme-toggle::after { content: "☀️"; }
                             <li>
                                 May 28 2024
                                 <a href="https://runetan.github.io/zh/post/cos/8/">The Cosmological Constant Paradox</a>
-                            </li>
-                        
-                    </ul>
-                </div>
-            
-                <div class="pb-3">
-                    <h5>
-                    <span class="badge category text-capitalize">
-                        Photos
-                    </span>
-                    </h5>
-                    <ul class="list-unstyled">
-                        
-                            <li>
-                                May 28 2024
-                                <a href="https://runetan.github.io/zh/post/photos/9/">Gansu, China</a>
-                            </li>
-                        
-                            <li>
-                                May 28 2024
-                                <a href="https://runetan.github.io/zh/post/photos/2/">Guangzhou, China</a>
-                            </li>
-                        
-                            <li>
-                                May 28 2024
-                                <a href="https://runetan.github.io/zh/post/photos/7/">Melbourne, Australia</a>
-                            </li>
-                        
-                            <li>
-                                May 28 2024
-                                <a href="https://runetan.github.io/zh/post/photos/8/">Qinghai, China</a>
-                            </li>
-                        
-                            <li>
-                                May 28 2024
-                                <a href="https://runetan.github.io/zh/post/photos/5/">Shenzhen, China</a>
-                            </li>
-                        
-                            <li>
-                                May 28 2024
-                                <a href="https://runetan.github.io/zh/post/photos/6/">Sydney, Australia</a>
-                            </li>
-                        
-                            <li>
-                                May 28 2024
-                                <a href="https://runetan.github.io/zh/post/photos/4/">Wuhan, China</a>
                             </li>
                         
                     </ul>
