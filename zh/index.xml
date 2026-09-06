@@ -7,21 +7,21 @@
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>&amp;copy; Copyright 2024-2077(even more), Rune</copyright>
-    <lastBuildDate>Sun, 30 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://runetan.github.io/zh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>关于</title>
       <link>https://runetan.github.io/zh/about/</link>
-      <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
       <guid>https://runetan.github.io/zh/about/</guid>
-      <description>我是谭子立，中山大学物理学学士，现为阿姆斯特丹大学 Physics and Astronomy 联合硕士生（理论物理方向）。研究兴趣为量子引力、量子宇宙学、暴胀，以及面向高能理论的人工智能方法。&#xA;邮箱：zili.tan@student.uva.nl&#xA;教育经历 荷兰阿姆斯特丹大学 — Physics and Astronomy 联合硕士（理论物理方向），2025 年 9 月 – 2027 年 6 月（预期）。GPA：4.0/4.0。 中国广州中山大学 — 物理学学士，2021 年 9 月 – 2025 年 7 月。GPA：3.7/4.0。荣誉：三等奖学金（2022 年 10 月）。 研究经历 de Sitter JT 引力中观测者相对的暴胀历史（2026 年 6 月至今），导师 Ben Freivogel 与 Jan Pieter van der Schaar 教授，阿姆斯特丹大学。 全息宇宙学（2024 年 9 月 – 2025 年 4 月），导师韩成成教授，中山大学。 暴胀宇宙学（2022 年 10 月 – 2023 年 12 月），导师韩成成教授，中山大学。结题报告获评优秀，并获大学生创新创业训练计划校级奖项（2024 年 3 月）。 详见简历页面。</description>
+      <description>我是谭子立，中山大学物理学学士，现为阿姆斯特丹大学 Physics and Astronomy 联合硕士生（理论物理方向）。研究兴趣为机器学习与深度学习，重点关注递归自我改进（RSI）、自进化系统，以及面向高能理论或宇宙学的人工智能。&#xA;邮箱：zili.tan@student.uva.nl&#xA;教育经历 荷兰阿姆斯特丹大学 — Physics and Astronomy 联合硕士（理论物理方向），2025 年 9 月 – 2027 年 6 月（预期）。GPA：4.0/4.0。 中国广州中山大学 — 物理学学士，2021 年 9 月 – 2025 年 7 月。GPA：3.7/4.0。荣誉：三等奖学金（2022 年 10 月）。 研究经历 递归自我改进（RSI）（2026 年 8 月至今），与 Meng Bi 等人的合作项目。 de Sitter JT 引力中观测者相对的暴胀历史（2026 年 6 月 – 9 月），导师 Ben Freivogel 与 Jan Pieter van der Schaar 教授，阿姆斯特丹大学。 de Sitter 静态坐标片中的洛伦兹引力路径积分（2026 年 4 月 – 6 月），导师 Jan Pieter van der Schaar 教授，阿姆斯特丹大学。 全息宇宙学若干方面（2024 年 9 月 – 2025 年 4 月），导师韩成成教授，中山大学。 暴胀宇宙学若干方面（2022 年 10 月 – 2023 年 12 月），导师韩成成教授，中山大学。结题报告获评优秀，并获大学生创新创业训练计划校级奖项（2024 年 3 月）。 详见简历页面。</description>
     </item>
     <item>
       <title>简历</title>
       <link>https://runetan.github.io/zh/cv/</link>
-      <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
       <guid>https://runetan.github.io/zh/cv/</guid>
-      <description>谭子立（Zili Tan） · zili.tan@student.uva.nl · runetan.github.io&#xA;教育经历 荷兰阿姆斯特丹大学 — Physics and Astronomy 联合硕士，理论物理方向，2025 年 9 月 – 2027 年 6 月（预期）。&#xA;GPA：4.0/4.0 中国广州中山大学 — 物理学学士，2021 年 9 月 – 2025 年 7 月。&#xA;GPA：3.7/4.0 荣誉：三等奖学金（2022 年 10 月） 研究兴趣 量子引力、量子宇宙学、暴胀，以及面向高能理论（hep-th）的人工智能。&#xA;研究经历 de Sitter JT 引力中观测者相对的暴胀历史 导师：Ben Freivogel 教授、Jan Pieter van der Schaar 教授，阿姆斯特丹大学，2026 年 6 月至今。&#xA;研究 de Sitter JT 引力与均匀暴胀场及弱耦合观测者的耦合，采用观测者相对引力路径积分（GPI）方法。 计算了无边界波函数振幅、引力与暴胀场单圈行列式，以及全局 de Sitter 与虫洞对观测者相对无边界概率的贡献。 发现当前的观测者相对 GPI 方案无法归一化无边界态，表明 Hartle-Hawking 方案在观测者相对希尔伯特空间中可能存在不自洽之处。 全息宇宙学 导师：韩成成教授，中山大学，2024 年 9 月 – 2025 年 4 月。</description>
+      <description>谭子立（Zili Tan） · zili.tan@student.uva.nl · runetan.github.io&#xA;教育经历 荷兰阿姆斯特丹大学 — Physics and Astronomy 联合硕士，理论物理方向，2025 年 9 月 – 2027 年 6 月（预期）。&#xA;GPA：4.0/4.0 中国广州中山大学 — 物理学学士，2021 年 9 月 – 2025 年 7 月。&#xA;GPA：3.7/4.0 荣誉：三等奖学金（2022 年 10 月） 研究兴趣 机器学习与深度学习，重点关注递归自我改进（RSI）、自进化系统，以及面向高能理论或宇宙学的人工智能。&#xA;研究经历 递归自我改进（RSI） 与 Meng Bi 等人的合作项目，2026 年 8 月至今。&#xA;调研并学习了 DGM、HGM 与 MGM 的思想与具体实现。 参与提出了&amp;quot;遗传同质化&amp;quot;（genetic homogenization）这一想法。 提出 exp3 或可避免遗传同质化，尚待验证。 项目正在进行中。 de Sitter JT 引力中观测者相对的暴胀历史 导师：Ben Freivogel 教授、Jan Pieter van der Schaar 教授，阿姆斯特丹大学，2026 年 6 月 – 2026 年 9 月。</description>
     </item>
     <item>
       <title>Early universe 1.5</title>
