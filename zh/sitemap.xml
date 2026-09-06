@@ -15,19 +15,6 @@
                 href="https://runetan.github.io/zh/"
                 />
   </url><url>
-    <loc>https://runetan.github.io/zh/photos/</loc>
-    <lastmod>2026-09-06T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://runetan.github.io/photos/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://runetan.github.io/zh/photos/"
-                />
-  </url><url>
     <loc>https://runetan.github.io/zh/cv/</loc>
     <lastmod>2026-09-06T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -39,6 +26,19 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://runetan.github.io/zh/cv/"
+                />
+  </url><url>
+    <loc>https://runetan.github.io/zh/photos/</loc>
+    <lastmod>2026-09-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://runetan.github.io/photos/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://runetan.github.io/zh/photos/"
                 />
   </url><url>
     <loc>https://runetan.github.io/zh/photos/yunnan-2026-07/</loc>
