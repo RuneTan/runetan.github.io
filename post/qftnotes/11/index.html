@@ -41,15 +41,10 @@ html[data-theme="dark"] img { border: 1px solid #2c3340; }
  
 #theme-toggle { padding: 0 6px; }
 .taiji { display: block; width: 16px; height: 16px; transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
-.taiji .fish-dark { fill: #212529; transition: fill 0.5s; }
-.taiji .fish-light { fill: #e9ecef; transition: fill 0.5s; }
-.taiji .dot-light { fill: #f5f6f7; transition: fill 0.5s; }
-.taiji .dot-dark { fill: #212529; transition: fill 0.5s; }
-html[data-theme="dark"] .taiji { transform: rotate(180deg); }
-html[data-theme="dark"] .taiji .fish-dark { fill: #f5f6f7; }
-html[data-theme="dark"] .taiji .fish-light { fill: #2a3140; }
-html[data-theme="dark"] .taiji .dot-light { fill: #212529; }
-html[data-theme="dark"] .taiji .dot-dark { fill: #f5f6f7; }
+.taiji .fish { fill: #212529; stroke: currentColor; stroke-width: 1.5; stroke-opacity: 0.4; transition: fill 0.5s; }
+.taiji .eye { fill: #f5f6f7; transition: fill 0.5s; }
+html[data-theme="dark"] .taiji .fish { fill: #f5f6f7; }
+html[data-theme="dark"] .taiji .eye { fill: #212529; }
 
  
 .gallery-album { margin-bottom: 2.4rem; }
@@ -86,11 +81,8 @@ html[data-theme="dark"] .taiji .dot-dark { fill: #f5f6f7; }
         <div id="content" class="mx-auto"><header class="container mt-sm-5 mt-4 mb-4 mt-xs-1"><div class="site-controls">
         <button id="theme-toggle" class="control-btn" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
             <svg class="taiji" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <circle class="fish-dark" cx="50" cy="50" r="48"/>
-                <path class="fish-light" d="M50 4 A46 46 0 0 1 50 96 A23 23 0 0 1 50 50 A23 23 0 0 0 50 4 Z"/>
-                <circle class="dot-light" cx="50" cy="26" r="7"/>
-                <circle class="dot-dark" cx="50" cy="74" r="7"/>
-                <circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+                <path class="fish" d="M50 4 A46 46 0 0 1 50 96 A23 23 0 0 1 50 50 A23 23 0 0 0 50 4 Z"/>
+                <circle class="eye" cx="50" cy="74" r="7"/>
             </svg>
         </button><a class="control-btn" href="/zh/post/qftnotes/11/">中文</a></div>
     <div class="row">
@@ -470,7 +462,16 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-e1b794f9" href="
 (function(){
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var el = btn.querySelector('.taiji');
+  if (!el) return;
+  var rot = parseInt(localStorage.getItem('taiji-rot') || '0', 10) || 0;
+  var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+  if ((Math.round(rot / 180) % 2 === 1) !== dark) { rot += 180; }
+  el.style.transform = 'rotate(' + rot + 'deg)';
   btn.addEventListener('click', function(){
+    rot += 180; 
+    el.style.transform = 'rotate(' + rot + 'deg)';
+    try { localStorage.setItem('taiji-rot', String(rot)); } catch(e) {}
     var cur = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', cur);
     try { localStorage.setItem('theme', cur); } catch(e) {}
