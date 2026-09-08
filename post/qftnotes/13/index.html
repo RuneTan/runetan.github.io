@@ -43,9 +43,13 @@ html[data-theme="dark"] img { border: 1px solid #2c3340; }
 .taiji { display: block; width: 16px; height: 16px; transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
 .taiji .fish-dark { fill: #212529; transition: fill 0.5s; }
 .taiji .fish-light { fill: #e9ecef; transition: fill 0.5s; }
+.taiji .dot-light { fill: #f5f6f7; transition: fill 0.5s; }
+.taiji .dot-dark { fill: #212529; transition: fill 0.5s; }
 html[data-theme="dark"] .taiji { transform: rotate(180deg); }
 html[data-theme="dark"] .taiji .fish-dark { fill: #f5f6f7; }
 html[data-theme="dark"] .taiji .fish-light { fill: #2a3140; }
+html[data-theme="dark"] .taiji .dot-light { fill: #212529; }
+html[data-theme="dark"] .taiji .dot-dark { fill: #f5f6f7; }
 
  
 .gallery-album { margin-bottom: 2.4rem; }
@@ -82,11 +86,11 @@ html[data-theme="dark"] .taiji .fish-light { fill: #2a3140; }
         <div id="content" class="mx-auto"><header class="container mt-sm-5 mt-4 mb-4 mt-xs-1"><div class="site-controls">
         <button id="theme-toggle" class="control-btn" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
             <svg class="taiji" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <circle cx="50" cy="50" r="47" fill="none" stroke="currentColor" stroke-width="2.5" opacity="0.45"/>
-                <path class="fish-dark" d="M50 4 A46 46 0 0 1 50 96 A23 23 0 0 0 50 50 A23 23 0 0 1 50 4 Z"/>
-                <path class="fish-light" d="M50 4 A46 46 0 0 0 50 96 A23 23 0 0 1 50 50 A23 23 0 0 0 50 4 Z"/>
-                <circle cx="50" cy="26" r="7" class="fish-light"/>
-                <circle cx="50" cy="74" r="7" class="fish-dark"/>
+                <circle class="fish-dark" cx="50" cy="50" r="48"/>
+                <path class="fish-light" d="M50 4 A46 46 0 0 1 50 96 A23 23 0 0 1 50 50 A23 23 0 0 0 50 4 Z"/>
+                <circle class="dot-light" cx="50" cy="26" r="7"/>
+                <circle class="dot-dark" cx="50" cy="74" r="7"/>
+                <circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" stroke-width="2" opacity="0.5"/>
             </svg>
         </button><a class="control-btn" href="/zh/post/qftnotes/13/">中文</a></div>
     <div class="row">
