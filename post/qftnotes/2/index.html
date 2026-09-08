@@ -464,10 +464,16 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-34975f93" href="
   if (!btn) return;
   var el = btn.querySelector('.taiji');
   if (!el) return;
-  var rot = parseInt(localStorage.getItem('taiji-rot') || '0', 10) || 0;
+  
+  var rot = (Math.round((parseInt(localStorage.getItem('taiji-rot') || '0', 10) || 0) / 180) % 2) * 180;
   var dark = document.documentElement.getAttribute('data-theme') === 'dark';
-  if ((Math.round(rot / 180) % 2 === 1) !== dark) { rot += 180; }
+  if ((rot === 180) !== dark) { rot = rot === 0 ? 180 : 0; }
+  
+  el.style.transition = 'none';
   el.style.transform = 'rotate(' + rot + 'deg)';
+  void el.offsetWidth; 
+  el.style.transition = '';
+  try { localStorage.setItem('taiji-rot', String(rot)); } catch(e) {}
   btn.addEventListener('click', function(){
     rot += 180; 
     el.style.transform = 'rotate(' + rot + 'deg)';
