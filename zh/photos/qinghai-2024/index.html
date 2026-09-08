@@ -40,11 +40,12 @@ html[data-theme="dark"] img { border: 1px solid #2c3340; }
 
  
 #theme-toggle { padding: 0 6px; }
-.fish-wrap { display: block; transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
-#theme-toggle .icon-fish-light { display: none; }
-html[data-theme="dark"] .fish-wrap { transform: rotate(180deg); }
-html[data-theme="dark"] #theme-toggle .icon-fish-dark { display: none; }
-html[data-theme="dark"] #theme-toggle .icon-fish-light { display: block; }
+.taiji { display: block; width: 16px; height: 16px; transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
+.taiji .fish-dark { fill: #212529; transition: fill 0.5s; }
+.taiji .fish-light { fill: #e9ecef; transition: fill 0.5s; }
+html[data-theme="dark"] .taiji { transform: rotate(180deg); }
+html[data-theme="dark"] .taiji .fish-dark { fill: #f5f6f7; }
+html[data-theme="dark"] .taiji .fish-light { fill: #2a3140; }
 
  
 .gallery-album { margin-bottom: 2.4rem; }
@@ -80,18 +81,13 @@ html[data-theme="dark"] #theme-toggle .icon-fish-light { display: block; }
 <body>
         <div id="content" class="mx-auto"><header class="container mt-sm-5 mt-4 mb-4 mt-xs-1"><div class="site-controls">
         <button id="theme-toggle" class="control-btn" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
-            <span class="fish-wrap">
-                <svg class="icon-fish-dark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <circle cx="50" cy="50" r="47" fill="none" stroke="currentColor" stroke-width="2.5" opacity="0.45"/>
-                    <path d="M50 4 A46 46 0 0 1 50 96 A23 23 0 0 0 50 50 A23 23 0 0 1 50 4 Z" fill="#212529"/>
-                    <circle cx="50" cy="26" r="7" fill="#f5f6f7"/>
-                </svg>
-                <svg class="icon-fish-light" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <circle cx="50" cy="50" r="47" fill="none" stroke="currentColor" stroke-width="2.5" opacity="0.45"/>
-                    <path d="M50 4 A46 46 0 0 0 50 96 A23 23 0 0 1 50 50 A23 23 0 0 0 50 4 Z" fill="#f5f6f7"/>
-                    <circle cx="50" cy="74" r="7" fill="#212529"/>
-                </svg>
-            </span>
+            <svg class="taiji" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="50" cy="50" r="47" fill="none" stroke="currentColor" stroke-width="2.5" opacity="0.45"/>
+                <path class="fish-dark" d="M50 4 A46 46 0 0 1 50 96 A23 23 0 0 0 50 50 A23 23 0 0 1 50 4 Z"/>
+                <path class="fish-light" d="M50 4 A46 46 0 0 0 50 96 A23 23 0 0 1 50 50 A23 23 0 0 0 50 4 Z"/>
+                <circle cx="50" cy="26" r="7" class="fish-light"/>
+                <circle cx="50" cy="74" r="7" class="fish-dark"/>
+            </svg>
         </button><a class="control-btn" href="/photos/qinghai-2024/">English</a></div>
     <div class="row">
         
