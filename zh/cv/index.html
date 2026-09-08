@@ -35,8 +35,17 @@ html[data-theme="dark"] img { border: 1px solid #2c3340; }
 .site-controls { position: fixed; top: 12px; right: 14px; z-index: 999; display: flex; gap: 8px; }
 .control-btn { display: inline-flex; align-items: center; justify-content: center; min-width: 36px; height: 30px; padding: 0 10px; border: 1px solid rgba(127,127,127,.45); border-radius: 15px; background: transparent; color: inherit; font-size: 0.85rem; text-decoration: none !important; cursor: pointer; }
 .control-btn:hover { border-color: rgba(127,127,127,.9); }
-html[data-theme="light"] #theme-toggle::after { content: "🌙"; }
-html[data-theme="dark"] #theme-toggle::after { content: "☀️"; }
+
+ 
+
+ 
+#theme-toggle { padding: 0 6px; }
+.taiji { display: block; width: 16px; height: 16px; transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
+.taiji .fish-dark { fill: #212529; transition: fill 0.5s; }
+.taiji .fish-light { fill: #f5f6f7; transition: fill 0.5s; }
+html[data-theme="dark"] .taiji { transform: rotate(180deg); }
+html[data-theme="dark"] .taiji .fish-dark { fill: #f5f6f7; }
+html[data-theme="dark"] .taiji .fish-light { fill: #2a3140; }
 
  
 .gallery-album { margin-bottom: 2.4rem; }
@@ -71,7 +80,15 @@ html[data-theme="dark"] #theme-toggle::after { content: "☀️"; }
 </head>
 <body>
         <div id="content" class="mx-auto"><header class="container mt-sm-5 mt-4 mb-4 mt-xs-1"><div class="site-controls">
-        <button id="theme-toggle" class="control-btn" type="button" aria-label="Toggle dark mode" title="Toggle dark mode"></button><a class="control-btn" href="/cv/">English</a></div>
+        <button id="theme-toggle" class="control-btn" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <svg class="taiji" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="50" cy="50" r="47" fill="none" stroke="currentColor" stroke-width="2.5" opacity="0.45"/>
+                <path class="fish-dark" d="M50 4 A46 46 0 0 1 50 96 A23 23 0 0 0 50 50 A23 23 0 1 50 4 Z"/>
+                <path class="fish-light" d="M50 4 A46 46 0 0 0 50 96 A23 23 0 0 1 50 50 A23 23 0 0 50 4 Z"/>
+                <circle cx="50" cy="26" r="6.5" class="fish-light"/>
+                <circle cx="50" cy="74" r="6.5" class="fish-dark"/>
+            </svg>
+        </button><a class="control-btn" href="/cv/">English</a></div>
     <div class="row">
         
         <div class="col-sm-4 col-12 text-sm-right text-center pt-sm-4">
@@ -107,15 +124,11 @@ html[data-theme="dark"] #theme-toggle::after { content: "☀️"; }
                     </li>
                 
                     <li class="list-inline-item">
-                        <a class="badge badge-white " href="/zh/post/" title="Posts">Posts</a>
+                        <a class="badge badge-white " href="/zh/post/" title="笔记">笔记</a>
                     </li>
                 
                     <li class="list-inline-item">
                         <a class="badge badge-white " href="/zh/photos/" title="照片">照片</a>
-                    </li>
-                
-                    <li class="list-inline-item">
-                        <a class="badge badge-white " href="/zh/categories/" title="分类">分类</a>
                     </li>
                 
             </ul>
@@ -183,7 +196,7 @@ html[data-theme="dark"] #theme-toggle::after { content: "☀️"; }
 <li>对 Darwin、Huxley 与 Mendel Gödel Machine 三类自改进编程智能体开展了比较研究。</li>
 <li>参与提出了&quot;遗传同质化&quot;（genetic homogenization）这一想法，它会导致可遗传的设计多样性丧失。</li>
 <li>提出在避免遗传同质化方面，EXP3 算法可能优于 Thompson Sampling，尚待验证。</li>
-<li>目前正在准备将我们的工作投稿至 ICLR 2027。</li>
+<li>我们的工作目前正在准备投稿至 ICLR 2027。</li>
 </ul>
 <p><strong>de Sitter JT 引力中观测者相对的暴胀历史</strong>
 <em>导师：Ben Freivogel 教授、Jan Pieter van der Schaar 教授，阿姆斯特丹大学，2026 年 6 月 – 2026 年 9 月。</em></p>
@@ -206,16 +219,16 @@ html[data-theme="dark"] #theme-toggle::after { content: "☀️"; }
 <li>分析了全息模型如何解决低熵初始条件问题，并评估了利用未来 CMB 与原初引力波观测检验全息宇宙学的前景。</li>
 </ul>
 <h2 id="竞赛与获奖">竞赛与获奖</h2>
+<p><strong>国家级大学生创新创业训练计划</strong> — 报告人与团队成员，2022 年 12 月 – 2024 年 3 月。</p>
+<ul>
+<li>综述了慢滚模型，并将其预言功率谱与 Planck TT 观测对比。</li>
+<li>结题报告在国家级大学生创新创业训练计划中获评<strong>优秀</strong>（2024 年 3 月）。</li>
+</ul>
 <p><strong>中国大学生物理学术竞赛（CUPT）</strong> — 中山大学代表队队员，2021 年 12 月 – 2022 年 10 月。</p>
 <ul>
 <li>针对若干源于真实生活的物理问题开展流体力学与哈密顿力学文献调研，设计实验并建立理论模型；在中南地区赛与全国赛中汇报。</li>
 <li>获 CUPT <strong>全国一等奖</strong>（2022 年 10 月）。</li>
 <li>获中南地区赛<strong>一等奖</strong>（2022 年 6 月）。</li>
-</ul>
-<p><strong>国家级大学生创新创业训练计划</strong> — 报告人与团队成员，2022 年 12 月 – 2024 年 3 月。</p>
-<ul>
-<li>综述了慢滚模型，并将其预言功率谱与 Planck TT 观测对比。</li>
-<li>结题报告在国家级大学生创新创业训练计划中获评<strong>优秀</strong>（2024 年 3 月）。</li>
 </ul>
 <h2 id="课外活动">课外活动</h2>
 <ul>

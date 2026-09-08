@@ -35,8 +35,17 @@ html[data-theme="dark"] img { border: 1px solid #2c3340; }
 .site-controls { position: fixed; top: 12px; right: 14px; z-index: 999; display: flex; gap: 8px; }
 .control-btn { display: inline-flex; align-items: center; justify-content: center; min-width: 36px; height: 30px; padding: 0 10px; border: 1px solid rgba(127,127,127,.45); border-radius: 15px; background: transparent; color: inherit; font-size: 0.85rem; text-decoration: none !important; cursor: pointer; }
 .control-btn:hover { border-color: rgba(127,127,127,.9); }
-html[data-theme="light"] #theme-toggle::after { content: "🌙"; }
-html[data-theme="dark"] #theme-toggle::after { content: "☀️"; }
+
+ 
+
+ 
+#theme-toggle { padding: 0 6px; }
+.taiji { display: block; width: 16px; height: 16px; transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
+.taiji .fish-dark { fill: #212529; transition: fill 0.5s; }
+.taiji .fish-light { fill: #f5f6f7; transition: fill 0.5s; }
+html[data-theme="dark"] .taiji { transform: rotate(180deg); }
+html[data-theme="dark"] .taiji .fish-dark { fill: #f5f6f7; }
+html[data-theme="dark"] .taiji .fish-light { fill: #2a3140; }
 
  
 .gallery-album { margin-bottom: 2.4rem; }
@@ -71,7 +80,15 @@ html[data-theme="dark"] #theme-toggle::after { content: "☀️"; }
 </head>
 <body>
         <div id="content" class="mx-auto"><header class="container mt-sm-5 mt-4 mb-4 mt-xs-1"><div class="site-controls">
-        <button id="theme-toggle" class="control-btn" type="button" aria-label="Toggle dark mode" title="Toggle dark mode"></button><a class="control-btn" href="/zh/">中文</a></div>
+        <button id="theme-toggle" class="control-btn" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <svg class="taiji" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="50" cy="50" r="47" fill="none" stroke="currentColor" stroke-width="2.5" opacity="0.45"/>
+                <path class="fish-dark" d="M50 4 A46 46 0 0 1 50 96 A23 23 0 0 0 50 50 A23 23 0 1 50 4 Z"/>
+                <path class="fish-light" d="M50 4 A46 46 0 0 0 50 96 A23 23 0 0 1 50 50 A23 23 0 0 50 4 Z"/>
+                <circle cx="50" cy="26" r="6.5" class="fish-light"/>
+                <circle cx="50" cy="74" r="6.5" class="fish-dark"/>
+            </svg>
+        </button><a class="control-btn" href="/zh/">中文</a></div>
     <div class="row">
         
         <div class="col-sm-4 col-12 text-sm-right text-center pt-sm-4">
@@ -107,15 +124,11 @@ html[data-theme="dark"] #theme-toggle::after { content: "☀️"; }
                     </li>
                 
                     <li class="list-inline-item">
-                        <a class="badge badge-white " href="/post/" title="Posts">Posts</a>
+                        <a class="badge badge-white " href="/post/" title="Notes">Notes</a>
                     </li>
                 
                     <li class="list-inline-item">
                         <a class="badge badge-white " href="/photos/" title="Photos">Photos</a>
-                    </li>
-                
-                    <li class="list-inline-item">
-                        <a class="badge badge-white " href="/categories/" title="Categories">Categories</a>
                     </li>
                 
             </ul>
