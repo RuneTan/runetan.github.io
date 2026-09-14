@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>&amp;copy; 2024-2026 Zili Tan</copyright>
-    <lastBuildDate>Sun, 06 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://runetan.github.io/zh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>隐私政策</title>
+      <link>https://runetan.github.io/zh/privacy/</link>
+      <pubDate>Sun, 13 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://runetan.github.io/zh/privacy/</guid>
+      <description>本站只收集匿名的汇总访问统计，不识别访客身份，不设置任何 Cookie。因为没有需要 征求同意的东西，所以本站也没有 Cookie 弹窗。&#xA;收集什么 访问统计由 Cloudflare Web Analytics 提供，这是一项不使用 Cookie 的统计服务。 每次页面浏览会记录：&#xA;被访问的页面，以及来源域名（不记录完整的来源网址）； 由请求推断出的大致国家或地区； 设备类型、浏览器与操作系统； 访问时间。 不收集什么 不设置 Cookie，也不写入浏览器的本地存储。你的设备上不会被写入或读取任何 东西。 不做跨站、跨设备追踪，不尝试在你下次访问时认出你。 不做浏览器指纹，不做用户画像，不做广告，不把数据出售或提供给第三方自用。 没有账号、没有表单、没有邮件订阅——本站没有任何一处会要求你填写个人信息。 由谁处理 统计服务由 Cloudflare, Inc. 提供，其作为受托方代为处理请求数据，处理方式见 Cloudflare 隐私政策。本站托管在 GitHub Pages 上，托管环节产生的请求日志见 GitHub 隐私声明。&#xA;保留多久 汇总统计数据最长保留 13 个月，且不会因为新的访问而自动续期。&#xA;如何反对 由于没有在你的设备上存任何东西、也没有识别到任何个人，因此并不存在需要你关闭的 追踪开关。如果你仍然不希望被计入统计，可以：&#xA;在浏览器中开启 Do Not Track 或 Global Privacy Control；或 发邮件到 zili.tan@student.uva.nl，我会把你的 访问排除在外。 对以上任何内容有疑问，也欢迎用同一邮箱联系我。本页最后更新于 2026 年 9 月 13 日。</description>
+    </item>
     <item>
       <title>简历</title>
       <link>https://runetan.github.io/zh/cv/</link>

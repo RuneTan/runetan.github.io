@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2024-2026 Zili Tan</copyright>
-    <lastBuildDate>Sun, 06 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://runetan.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Privacy</title>
+      <link>https://runetan.github.io/privacy/</link>
+      <pubDate>Sun, 13 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://runetan.github.io/privacy/</guid>
+      <description>This site collects anonymous, aggregate statistics about how it is used. It does not identify visitors, it sets no cookies, and there is no cookie banner because there is nothing to ask consent for.&#xA;What is collected Visitor statistics are provided by Cloudflare Web Analytics, a cookieless analytics service. For each page view it records:&#xA;the page that was viewed, and the referring domain (not the full referring URL); an approximate country, derived from the request; device type, browser and operating system; the time of the visit.</description>
+    </item>
     <item>
       <title>CV</title>
       <link>https://runetan.github.io/cv/</link>
