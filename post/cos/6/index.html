@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head>
-    <title>Zili Tan</title>
+    <title>Early universe 8.6 · Zili Tan</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Cosmology ppt" />
@@ -182,7 +182,7 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
             <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <hr>
-<script type="text/javascript" src= '/js/pdf-js/build/pdf.js'></script>
+<script type="text/javascript" src="/js/pdf-js/build/pdf.js"></script>
 
 <style>
   #embed-pdf-container {
@@ -278,11 +278,16 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
       </a>
     </div>
     <canvas class="pdf-canvas" id="pdf-canvas-fb3d66c7"></canvas>
+    <p class="pdf-error" id="pdf-error-fb3d66c7" role="alert" hidden>
+      
+      The PDF preview could not be displayed. Refresh the page to try again, or <a href="/files/cosmology/8.6.pdf">open the PDF file directly</a>.
+      
+    </p>
 </div>
 
-<div class="pdf-paginator" id="pdf-paginator-fb3d66c7">
-    <button id="pdf-prev-fb3d66c7">Previous</button>
-    <button id="pdf-next-fb3d66c7">Next</button> &nbsp; &nbsp;
+<div class="pdf-paginator" id="pdf-paginator-fb3d66c7" style="display: none;">
+    <button type="button" id="pdf-prev-fb3d66c7" disabled>Previous</button>
+    <button type="button" id="pdf-next-fb3d66c7" disabled>Next</button> &nbsp; &nbsp;
     <span>
       <span class="pdf-pagenum" id="pdf-pagenum-fb3d66c7"></span> / <span class="pdf-pagecount" id="pdf-pagecount-fb3d66c7"></span>
     </span>
@@ -299,37 +304,56 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-fb3d66c7" href="
 
     var hidePaginator = "" === "true";
     var hideLoader = "" === "true";
-    var selectedPageNum = parseInt("") || 1;
+    var selectedPageNum = parseInt("", 10) || 1;
 
     
     var pdfjsLib = window['pdfjs-dist/build/pdf'];
-
-    
-    if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
-      pdfjsLib.GlobalWorkerOptions.workerSrc = "https://runetan.github.io/js/pdf-js/build/pdf.worker.js";
 
     
     var pdfDoc = null,
         pageNum = selectedPageNum,
         pageRendering = false,
         pageNumPending = null,
+        failed = false,
         scale = 3,
         canvas = document.getElementById('pdf-canvas-fb3d66c7'),
-        ctx = canvas.getContext('2d'),
+        ctx = null,
         paginator = document.getElementById("pdf-paginator-fb3d66c7"),
-        loadingWrapper = document.getElementById('pdf-loadingWrapper-fb3d66c7');
+        loadingWrapper = document.getElementById('pdf-loadingWrapper-fb3d66c7'),
+        errorMessage = document.getElementById('pdf-error-fb3d66c7'),
+        prevButton = document.getElementById('pdf-prev-fb3d66c7'),
+        nextButton = document.getElementById('pdf-next-fb3d66c7');
 
 
     
     showPaginator();
     showLoader();
+    updateControls();
+
+    function updateControls() {
+      prevButton.disabled = failed || !pdfDoc || pageNum <= 1;
+      nextButton.disabled = failed || !pdfDoc || pageNum >= pdfDoc.numPages;
+    }
+
+    function showError() {
+      failed = true;
+      pageRendering = false;
+      pageNumPending = null;
+      loadingWrapper.style.display = 'none';
+      canvas.style.display = 'none';
+      errorMessage.hidden = false;
+      updateControls();
+    }
 
     
 
     function renderPage(num) {
       pageRendering = true;
+      showLoader();
       
-      pdfDoc.getPage(num).then(function(page) {
+      return Promise.resolve().then(function() {
+        return pdfDoc.getPage(num);
+      }).then(function(page) {
         var viewport = page.getViewport({scale: scale});
         canvas.height = viewport.height;
         canvas.width = viewport.width;
@@ -339,23 +363,19 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-fb3d66c7" href="
           canvasContext: ctx,
           viewport: viewport
         };
-        var renderTask = page.render(renderContext);
-
+        return page.render(renderContext).promise;
+      }).then(function() {
+        pageRendering = false;
+        document.getElementById('pdf-pagenum-fb3d66c7').textContent = num;
         
-        renderTask.promise.then(function() {
-          pageRendering = false;
-          showContent();
-
-          if (pageNumPending !== null) {
-            
-            renderPage(pageNumPending);
-            pageNumPending = null;
-          }
-        });
-      });
-
-      
-      document.getElementById('pdf-pagenum-fb3d66c7').textContent = num;
+        var pending = pageNumPending;
+        pageNumPending = null;
+        if (pending !== null && pending !== num) {
+          return renderPage(pending);
+        }
+        showContent();
+        updateControls();
+      }).catch(showError);
     }
 
     
@@ -368,21 +388,21 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-fb3d66c7" href="
     
 
     function showLoader() {
-      if(hideLoader) return
-      loadingWrapper.style.display = 'flex';
+      loadingWrapper.style.display = hideLoader ? 'none' : 'flex';
       canvas.style.display = 'none';
     }
 
     
 
     function showPaginator() {
-      if(hidePaginator) return
-      paginator.style.display = 'block';
+      paginator.style.display = hidePaginator ? 'none' : 'block';
     }
 
     
 
     function queueRenderPage(num) {
+      if (!pdfDoc || failed) return;
+      updateControls();
       if (pageRendering) {
         pageNumPending = num;
       } else {
@@ -393,40 +413,48 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-fb3d66c7" href="
     
 
     function onPrevPage() {
-      if (pageNum <= 1) {
+      if (!pdfDoc || failed || pageNum <= 1) {
         return;
       }
       pageNum--;
       queueRenderPage(pageNum);
     }
-    document.getElementById('pdf-prev-fb3d66c7').addEventListener('click', onPrevPage);
+    prevButton.addEventListener('click', onPrevPage);
 
     
 
     function onNextPage() {
-      if (pageNum >= pdfDoc.numPages) {
+      if (!pdfDoc || failed || pageNum >= pdfDoc.numPages) {
         return;
       }
       pageNum++;
       queueRenderPage(pageNum);
     }
-    document.getElementById('pdf-next-fb3d66c7').addEventListener('click', onNextPage);
+    nextButton.addEventListener('click', onNextPage);
 
     
 
-    pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+    Promise.resolve().then(function() {
+      if (!pdfjsLib || !pdfjsLib.GlobalWorkerOptions || typeof pdfjsLib.getDocument !== 'function') {
+        throw new Error('PDF.js is unavailable');
+      }
+      ctx = canvas.getContext('2d');
+      if (!ctx) throw new Error('Canvas is unavailable');
+      pdfjsLib.GlobalWorkerOptions.workerSrc = '\/js\/pdf-js\/build\/pdf.worker.js';
+      return pdfjsLib.getDocument(url).promise;
+    }).then(function(pdfDoc_) {
       pdfDoc = pdfDoc_;
       var numPages = pdfDoc.numPages;
+      if (!numPages || numPages < 1) throw new Error('The PDF has no pages');
       document.getElementById('pdf-pagecount-fb3d66c7').textContent = numPages;
 
       
-      if(pageNum > numPages) {
-        pageNum = numPages
-      }
+      pageNum = Math.max(1, Math.min(pageNum, numPages));
+      updateControls();
 
       
-      renderPage(pageNum);
-    });
+      return renderPage(pageNum);
+    }).catch(showError);
     })();
 </script>
 
@@ -453,6 +481,7 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-fb3d66c7" href="
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
+    if (typeof renderMathInElement !== 'function') return;
     renderMathInElement(document.body, {
       delimiters: [
         {left: '\\[', right: '\\]', display: true},   
@@ -471,7 +500,9 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-fb3d66c7" href="
   var el = btn.querySelector('.taiji');
   if (!el) return;
   
-  var rot = (Math.round((parseInt(localStorage.getItem('taiji-rot') || '0', 10) || 0) / 180) % 2) * 180;
+  var storedRot = '0';
+  try { storedRot = localStorage.getItem('taiji-rot') || '0'; } catch(e) {}
+  var rot = (Math.round((parseInt(storedRot, 10) || 0) / 180) % 2) * 180;
   var dark = document.documentElement.getAttribute('data-theme') === 'dark';
   if ((rot === 180) !== dark) { rot = rot === 0 ? 180 : 0; }
   

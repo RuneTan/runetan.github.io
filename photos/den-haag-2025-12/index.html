@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head>
-    <title>Zili Tan</title>
+    <title>Den Haag, the Netherlands · Zili Tan</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="" />
@@ -171,11 +171,158 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
     <hr />
 </header>
 <div class="container">
-    <div class="pl-sm-4 ml-sm-5">
+<div class="gallery">
+    
+    <p><a href="/photos/">&larr; All albums</a></p>
+    
+    <section class="gallery-album">
+        <div class="gallery-album-head">
+            <h1 class="h4 mb-0">Den Haag, the Netherlands</h1>
+            <small class="text-muted"><time datetime="2025-12-21">December 2025</time></small>
+
+        </div>
         
-    </div>
+        
+
+<div class="gallery-grid">
+    
+    
+    
+    
+    
+    <a class="gallery-item" href="/images/originals/den-haag-2025-12/IMG_3614.jpg" aria-label="View full-size photo: Den Haag, the Netherlands — Photo 1" aria-haspopup="dialog" aria-controls="lightbox">
+        <img loading="lazy" src="/images/thumbs/den-haag-2025-12/IMG_3614.jpg" alt="Den Haag, the Netherlands — Photo 1">
+    </a>
+    
+    
+    
+    
+    
+    <a class="gallery-item" href="/images/originals/den-haag-2025-12/IMG_3643.jpg" aria-label="View full-size photo: Den Haag, the Netherlands — Photo 2" aria-haspopup="dialog" aria-controls="lightbox">
+        <img loading="lazy" src="/images/thumbs/den-haag-2025-12/IMG_3643.jpg" alt="Den Haag, the Netherlands — Photo 2">
+    </a>
+    
+    
+    
+    
+    
+    <a class="gallery-item" href="/images/originals/den-haag-2025-12/IMG_3666.jpg" aria-label="View full-size photo: Den Haag, the Netherlands — Photo 3" aria-haspopup="dialog" aria-controls="lightbox">
+        <img loading="lazy" src="/images/thumbs/den-haag-2025-12/IMG_3666.jpg" alt="Den Haag, the Netherlands — Photo 3">
+    </a>
+    
+    
+    
+    
+    
+    <a class="gallery-item" href="/images/originals/den-haag-2025-12/IMG_3698.jpg" aria-label="View full-size photo: Den Haag, the Netherlands — Photo 4" aria-haspopup="dialog" aria-controls="lightbox">
+        <img loading="lazy" src="/images/thumbs/den-haag-2025-12/IMG_3698.jpg" alt="Den Haag, the Netherlands — Photo 4">
+    </a>
+    
+</div>
+
+    </section>
+</div>
+
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" tabindex="-1" hidden>
+    <button id="lb-close" class="lb-btn lb-close" type="button" aria-label="Close">&times;</button>
+    <button id="lb-prev" class="lb-btn lb-prev" type="button" aria-label="Previous photo">&#8249;</button>
+    <img id="lb-img" alt="">
+    <button id="lb-next" class="lb-btn lb-next" type="button" aria-label="Next photo">&#8250;</button>
+    <p id="lb-status" class="sr-only" aria-live="polite" aria-atomic="true"></p>
+</div>
+
+<script>
+(function(){
+    var items = Array.prototype.slice.call(document.querySelectorAll('.gallery-item'));
+    if (!items.length) return;
+    var lb = document.getElementById('lightbox');
+    var img = document.getElementById('lb-img');
+    var status = document.getElementById('lb-status');
+    var closeButton = document.getElementById('lb-close');
+    var previousButton = document.getElementById('lb-prev');
+    var nextButton = document.getElementById('lb-next');
+    var controls = [closeButton, previousButton, nextButton];
+    var index = 0;
+    var trigger = null;
+    var previousOverflow = '';
+    var background = [];
 
     
+    document.body.appendChild(lb);
+
+    function show(i){
+        index = (i + items.length) % items.length;
+        img.src = items[index].getAttribute('href');
+        img.alt = items[index].querySelector('img').alt;
+        status.textContent = img.alt;
+    }
+
+    function open(i, link){
+        trigger = link;
+        previousOverflow = document.body.style.overflow;
+        show(i);
+        lb.hidden = false;
+        document.body.style.overflow = 'hidden';
+        closeButton.focus();
+        background = Array.prototype.filter.call(document.body.children, function(element){
+            return element !== lb && !/^(SCRIPT|STYLE|LINK)$/.test(element.tagName);
+        }).map(function(element){
+            var state = { element: element, inert: element.getAttribute('inert'), hidden: element.getAttribute('aria-hidden') };
+            element.setAttribute('inert', '');
+            element.setAttribute('aria-hidden', 'true');
+            return state;
+        });
+    }
+
+    function close(){
+        if (lb.hidden) return;
+        lb.hidden = true;
+        document.body.style.overflow = previousOverflow;
+        background.forEach(function(state){
+            if (state.inert === null) state.element.removeAttribute('inert');
+            else state.element.setAttribute('inert', state.inert);
+            if (state.hidden === null) state.element.removeAttribute('aria-hidden');
+            else state.element.setAttribute('aria-hidden', state.hidden);
+        });
+        background = [];
+        img.removeAttribute('src');
+        status.textContent = '';
+        if (trigger && document.documentElement.contains(trigger)) trigger.focus();
+        trigger = null;
+    }
+
+    items.forEach(function(link, i){
+        link.addEventListener('click', function(event){
+            if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+            event.preventDefault();
+            open(i, link);
+        });
+    });
+    closeButton.addEventListener('click', close);
+    previousButton.addEventListener('click', function(){ show(index - 1); });
+    nextButton.addEventListener('click', function(){ show(index + 1); });
+    lb.addEventListener('click', function(event){ if (event.target === lb) close(); });
+    document.addEventListener('focusin', function(event){
+        if (!lb.hidden && !lb.contains(event.target)) closeButton.focus();
+    });
+    document.addEventListener('keydown', function(event){
+        if (lb.hidden) return;
+        if (event.key === 'Escape') {
+            event.preventDefault();
+            close();
+        } else if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+            event.preventDefault();
+            show(index + (event.key === 'ArrowLeft' ? -1 : 1));
+        } else if (event.key === 'Tab') {
+            event.preventDefault();
+            var focused = controls.indexOf(document.activeElement);
+            var next = focused === -1 ? (event.shiftKey ? controls.length - 1 : 0) : (focused + (event.shiftKey ? -1 : 1) + controls.length) % controls.length;
+            controls[next].focus();
+        }
+    });
+})();
+</script>
+
 
             </div>
         </div><footer class="text-center pb-1">
@@ -194,6 +341,7 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
+    if (typeof renderMathInElement !== 'function') return;
     renderMathInElement(document.body, {
       delimiters: [
         {left: '\\[', right: '\\]', display: true},   
@@ -212,7 +360,9 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
   var el = btn.querySelector('.taiji');
   if (!el) return;
   
-  var rot = (Math.round((parseInt(localStorage.getItem('taiji-rot') || '0', 10) || 0) / 180) % 2) * 180;
+  var storedRot = '0';
+  try { storedRot = localStorage.getItem('taiji-rot') || '0'; } catch(e) {}
+  var rot = (Math.round((parseInt(storedRot, 10) || 0) / 180) % 2) * 180;
   var dark = document.documentElement.getAttribute('data-theme') === 'dark';
   if ((rot === 180) !== dark) { rot = rot === 0 ? 180 : 0; }
   

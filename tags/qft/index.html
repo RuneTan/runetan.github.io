@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head>
-    <title>Zili Tan</title>
+    <title>QFT · Zili Tan</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="" />
@@ -394,6 +394,7 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
+    if (typeof renderMathInElement !== 'function') return;
     renderMathInElement(document.body, {
       delimiters: [
         {left: '\\[', right: '\\]', display: true},   
@@ -412,7 +413,9 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
   var el = btn.querySelector('.taiji');
   if (!el) return;
   
-  var rot = (Math.round((parseInt(localStorage.getItem('taiji-rot') || '0', 10) || 0) / 180) % 2) * 180;
+  var storedRot = '0';
+  try { storedRot = localStorage.getItem('taiji-rot') || '0'; } catch(e) {}
+  var rot = (Math.round((parseInt(storedRot, 10) || 0) / 180) % 2) * 180;
   var dark = document.documentElement.getAttribute('data-theme') === 'dark';
   if ((rot === 180) !== dark) { rot = rot === 0 ? 180 : 0; }
   

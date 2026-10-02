@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head>
-    <title>Zili Tan</title>
+    <title>Privacy · Zili Tan</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="How runetan.github.io handles visitor data: cookieless, anonymous statistics with no tracking and no cookie banner." />
@@ -186,8 +186,8 @@ service. For each page view it records:</p>
 </ul>
 <h2 id="what-is-not-collected">What is not collected</h2>
 <ul>
-<li><strong>No cookies</strong> and nothing written to your browser&rsquo;s local storage. Nothing is ever
-stored on or read from your device.</li>
+<li><strong>No analytics cookies or analytics identifiers in local storage.</strong> The site&rsquo;s
+appearance settings are stored locally as described below.</li>
 <li><strong>No cross-site or cross-device tracking</strong>, and no attempt to recognise you on a
 later visit.</li>
 <li><strong>No fingerprinting</strong>, no profiling, no advertising, no data sold or shared with
@@ -195,6 +195,11 @@ third parties for their own purposes.</li>
 <li><strong>No accounts, no forms, no newsletter</strong> — there is nothing on this site that asks
 for personal information.</li>
 </ul>
+<h2 id="appearance-preferences-on-your-device">Appearance preferences on your device</h2>
+<p>The site reads and saves <code>theme</code> and <code>taiji-rot</code> in your browser&rsquo;s local storage to
+remember your light or dark theme and the theme button&rsquo;s orientation. These values
+are used only for the interface and are not sent to the analytics service. If your
+browser blocks local storage, you can still change the theme for the current page.</p>
 <h2 id="who-processes-it">Who processes it</h2>
 <p>Cloudflare, Inc. provides the analytics service and processes the request data on my
 behalf as a service provider. See
@@ -206,15 +211,15 @@ for the request logs that hosting involves.</p>
 <p>Aggregate statistics are retained for no longer than 13 months and are not renewed
 automatically by new visits.</p>
 <h2 id="how-to-object">How to object</h2>
-<p>Because nothing is stored on your device and no individual is identified, there is no
-tracking to switch off. If you would still prefer not to be counted, either:</p>
+<p>The locally saved appearance preferences do not identify you or track your visits.
+If you would still prefer not to be counted in the aggregate statistics, either:</p>
 <ul>
 <li>enable <strong>Do Not Track</strong> or <strong>Global Privacy Control</strong> in your browser, or</li>
 <li>email me at <a href="mailto:zili.tan@student.uva.nl">zili.tan@student.uva.nl</a> and I will
 exclude your visits.</li>
 </ul>
 <p>Questions about any of the above are welcome at the same address. This page was last
-updated on 13 September 2026.</p>
+updated on 2 October 2026.</p>
 
     </div>
 
@@ -237,6 +242,7 @@ updated on 13 September 2026.</p>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
+    if (typeof renderMathInElement !== 'function') return;
     renderMathInElement(document.body, {
       delimiters: [
         {left: '\\[', right: '\\]', display: true},   
@@ -255,7 +261,9 @@ updated on 13 September 2026.</p>
   var el = btn.querySelector('.taiji');
   if (!el) return;
   
-  var rot = (Math.round((parseInt(localStorage.getItem('taiji-rot') || '0', 10) || 0) / 180) % 2) * 180;
+  var storedRot = '0';
+  try { storedRot = localStorage.getItem('taiji-rot') || '0'; } catch(e) {}
+  var rot = (Math.round((parseInt(storedRot, 10) || 0) / 180) % 2) * 180;
   var dark = document.documentElement.getAttribute('data-theme') === 'dark';
   if ((rot === 180) !== dark) { rot = rot === 0 ? 180 : 0; }
   

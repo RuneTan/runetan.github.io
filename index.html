@@ -4,7 +4,7 @@
     <title>Zili Tan</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Zili Tan — machine learning and theoretical physics: recursive self-improvement (RSI), interpretability and physics of AI, and AI for high-energy theory. MSc student at the University of Amsterdam." />
+    <meta name="description" content="Zili Tan — self-improving AI systems, learning dynamics, continual adaptation, and neural architectures. Joint MSc student in Physics and Astronomy at the University of Amsterdam and Vrije Universiteit Amsterdam." />
 
     
     <script>
@@ -175,7 +175,7 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
     
     
         <div class="pl-sm-4 ml-sm-5">
-            <p>I am Zili Tan, a physics graduate of Sun Yat-sen University (BSc, 2021–2025) and currently an MSc student in the joint Physics and Astronomy programme (Theoretical Physics track) at the University of Amsterdam (2025–2027). My research interests are recursive self-improvement (RSI), interpretability and physics of AI, and AI for high-energy theory or cosmology.</p>
+            <p>I am Zili Tan, a physics graduate of Sun Yat-sen University (BSc, 2021–2025) and currently an MSc student in the joint Physics and Astronomy programme (Theoretical Physics track) at the University of Amsterdam and Vrije Universiteit Amsterdam (2025–2027, expected). My research interests are self-improving AI systems, learning dynamics, continual adaptation, and neural architectures.</p>
 <p>This site hosts my cosmology slides, notes on Coleman&rsquo;s QFT lectures, and my photography — see <a href="/photos/">Photos</a> and <a href="/post/">Notes</a>. A full curriculum vitae is available on the <a href="/cv/">CV</a> page.</p>
 
         </div>
@@ -198,6 +198,7 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
+    if (typeof renderMathInElement !== 'function') return;
     renderMathInElement(document.body, {
       delimiters: [
         {left: '\\[', right: '\\]', display: true},   
@@ -216,7 +217,9 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
   var el = btn.querySelector('.taiji');
   if (!el) return;
   
-  var rot = (Math.round((parseInt(localStorage.getItem('taiji-rot') || '0', 10) || 0) / 180) % 2) * 180;
+  var storedRot = '0';
+  try { storedRot = localStorage.getItem('taiji-rot') || '0'; } catch(e) {}
+  var rot = (Math.round((parseInt(storedRot, 10) || 0) / 180) % 2) * 180;
   var dark = document.documentElement.getAttribute('data-theme') === 'dark';
   if ((rot === 180) !== dark) { rot = rot === 0 ? 180 : 0; }
   

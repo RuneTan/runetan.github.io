@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="zh"><head>
-    <title>谭子立</title>
+    <title>隐私政策 · 谭子立</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="本站如何使用访客数据：不设 Cookie 的匿名统计，不做追踪，因此也没有 Cookie 弹窗。" />
@@ -185,12 +185,16 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
 </ul>
 <h2 id="不收集什么">不收集什么</h2>
 <ul>
-<li><strong>不设置 Cookie</strong>，也不写入浏览器的本地存储。你的设备上不会被写入或读取任何
-东西。</li>
+<li><strong>不设置统计 Cookie，也不在本地存储中保存统计标识符。</strong> 网站会在本地保存下文
+所述的外观偏好。</li>
 <li><strong>不做跨站、跨设备追踪</strong>，不尝试在你下次访问时认出你。</li>
 <li><strong>不做浏览器指纹</strong>，不做用户画像，不做广告，不把数据出售或提供给第三方自用。</li>
 <li><strong>没有账号、没有表单、没有邮件订阅</strong>——本站没有任何一处会要求你填写个人信息。</li>
 </ul>
+<h2 id="保存在设备上的外观偏好">保存在设备上的外观偏好</h2>
+<p>本站会在浏览器本地存储中读取和保存 <code>theme</code> 与 <code>taiji-rot</code>，用于记住深浅色主题和
+主题按钮的朝向。这些值仅用于界面显示，不会发送给统计服务。如果浏览器禁止本地
+存储，你仍然可以切换当前页面的主题。</p>
 <h2 id="由谁处理">由谁处理</h2>
 <p>统计服务由 Cloudflare, Inc. 提供，其作为受托方代为处理请求数据，处理方式见
 <a href="https://www.cloudflare.com/zh-cn/privacypolicy/">Cloudflare 隐私政策</a>。本站托管在
@@ -199,14 +203,14 @@ GitHub Pages 上，托管环节产生的请求日志见
 <h2 id="保留多久">保留多久</h2>
 <p>汇总统计数据最长保留 13 个月，且不会因为新的访问而自动续期。</p>
 <h2 id="如何反对">如何反对</h2>
-<p>由于没有在你的设备上存任何东西、也没有识别到任何个人，因此并不存在需要你关闭的
-追踪开关。如果你仍然不希望被计入统计，可以：</p>
+<p>保存在本地的外观偏好不会识别你的身份，也不会追踪你的访问。如果你仍然不希望被
+计入汇总统计，可以：</p>
 <ul>
 <li>在浏览器中开启 <strong>Do Not Track</strong> 或 <strong>Global Privacy Control</strong>；或</li>
 <li>发邮件到 <a href="mailto:zili.tan@student.uva.nl">zili.tan@student.uva.nl</a>，我会把你的
 访问排除在外。</li>
 </ul>
-<p>对以上任何内容有疑问，也欢迎用同一邮箱联系我。本页最后更新于 2026 年 9 月 13 日。</p>
+<p>对以上任何内容有疑问，也欢迎用同一邮箱联系我。本页最后更新于 2026 年 10 月 2 日。</p>
 
     </div>
 
@@ -229,6 +233,7 @@ GitHub Pages 上，托管环节产生的请求日志见
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
+    if (typeof renderMathInElement !== 'function') return;
     renderMathInElement(document.body, {
       delimiters: [
         {left: '\\[', right: '\\]', display: true},   
@@ -247,7 +252,9 @@ GitHub Pages 上，托管环节产生的请求日志见
   var el = btn.querySelector('.taiji');
   if (!el) return;
   
-  var rot = (Math.round((parseInt(localStorage.getItem('taiji-rot') || '0', 10) || 0) / 180) % 2) * 180;
+  var storedRot = '0';
+  try { storedRot = localStorage.getItem('taiji-rot') || '0'; } catch(e) {}
+  var rot = (Math.round((parseInt(storedRot, 10) || 0) / 180) % 2) * 180;
   var dark = document.documentElement.getAttribute('data-theme') === 'dark';
   if ((rot === 180) !== dark) { rot = rot === 0 ? 180 : 0; }
   

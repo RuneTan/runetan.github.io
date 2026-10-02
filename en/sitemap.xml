@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://runetan.github.io/</loc>
-    <lastmod>2026-09-13T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://runetan.github.io/privacy/</loc>
-    <lastmod>2026-09-13T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -29,7 +29,7 @@
                 />
   </url><url>
     <loc>https://runetan.github.io/cv/</loc>
-    <lastmod>2026-09-06T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -703,8 +703,5 @@
                 hreflang="en-us"
                 href="https://runetan.github.io/photos/wuhan-2023/"
                 />
-  </url><url>
-    <loc>https://runetan.github.io/archives/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url>
 </urlset>

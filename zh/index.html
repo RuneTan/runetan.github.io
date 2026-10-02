@@ -4,7 +4,7 @@
     <title>谭子立</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="谭子立——机器学习与理论物理：递归自我改进（RSI）、可解释性与AI的物理，以及面向高能理论的人工智能。荷兰阿姆斯特丹大学硕士生。" />
+    <meta name="description" content="谭子立——自我改进 AI 系统、学习动力学、持续适应与神经网络架构。阿姆斯特丹大学与阿姆斯特丹自由大学物理与天文学联合硕士生。" />
 
     
     <script>
@@ -175,8 +175,8 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
     
     
         <div class="pl-sm-4 ml-sm-5">
-            <p>我是谭子立，中山大学物理学学士（2021–2025），现于荷兰阿姆斯特丹大学攻读 Physics and Astronomy 联合硕士（理论物理方向，2025–2027）。研究兴趣为递归自我改进（RSI）、可解释性与AI的物理，以及面向高能理论或宇宙学的人工智能。</p>
-<p>本站收录暴胀宇宙学 PPT、Coleman QFT 讲义笔记（前 20 节）与摄影照片，见<a href="/zh/photos/">照片</a>与<a href="/zh/post/">笔记</a>。完整履历见<a href="/zh/cv/">简历</a>页面。</p>
+            <p>我是谭子立，中山大学物理学学士（2021–2025），现于阿姆斯特丹大学与阿姆斯特丹自由大学（Vrije Universiteit Amsterdam）攻读物理与天文学（Physics and Astronomy）联合硕士（理论物理方向，2025 年入学，预计 2027 年毕业）。研究兴趣为自我改进 AI 系统、学习动力学、持续适应与神经网络架构。</p>
+<p>本站收录暴胀宇宙学 PPT、Coleman QFT 讲义笔记与摄影照片，见<a href="/zh/photos/">照片</a>与<a href="/zh/post/">笔记</a>。完整履历见<a href="/zh/cv/">简历</a>页面。</p>
 
         </div>
     
@@ -198,6 +198,7 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
+    if (typeof renderMathInElement !== 'function') return;
     renderMathInElement(document.body, {
       delimiters: [
         {left: '\\[', right: '\\]', display: true},   
@@ -216,7 +217,9 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
   var el = btn.querySelector('.taiji');
   if (!el) return;
   
-  var rot = (Math.round((parseInt(localStorage.getItem('taiji-rot') || '0', 10) || 0) / 180) % 2) * 180;
+  var storedRot = '0';
+  try { storedRot = localStorage.getItem('taiji-rot') || '0'; } catch(e) {}
+  var rot = (Math.round((parseInt(storedRot, 10) || 0) / 180) % 2) * 180;
   var dark = document.documentElement.getAttribute('data-theme') === 'dark';
   if ((rot === 180) !== dark) { rot = rot === 0 ? 180 : 0; }
   
