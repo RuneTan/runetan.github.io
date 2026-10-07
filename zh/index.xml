@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>&amp;copy; 2024-2026 Zili Tan</copyright>
-    <lastBuildDate>Mon, 05 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://runetan.github.io/zh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>隐私政策</title>
@@ -15,13 +15,6 @@
       <pubDate>Sun, 13 Sep 2026 00:00:00 +0000</pubDate>
       <guid>https://runetan.github.io/zh/privacy/</guid>
       <description>本站只收集匿名的汇总访问统计，不识别访客身份，不设置任何 Cookie。因为没有需要 征求同意的东西，所以本站也没有 Cookie 弹窗。&#xA;收集什么 访问统计由 Cloudflare Web Analytics 提供，这是一项不使用 Cookie 的统计服务。 每次页面浏览会记录：&#xA;被访问的页面，以及来源域名（不记录完整的来源网址）； 由请求推断出的大致国家或地区； 设备类型、浏览器与操作系统； 访问时间。 不收集什么 不设置统计 Cookie，也不在本地存储中保存统计标识符。 网站会在本地保存下文 所述的外观偏好。 不做跨站、跨设备追踪，不尝试在你下次访问时认出你。 不做浏览器指纹，不做用户画像，不做广告，不把数据出售或提供给第三方自用。 没有账号、没有表单、没有邮件订阅——本站没有任何一处会要求你填写个人信息。 保存在设备上的外观偏好 本站会在浏览器本地存储中读取和保存 theme 与 taiji-rot，用于记住深浅色主题和 主题按钮的朝向。这些值仅用于界面显示，不会发送给统计服务。如果浏览器禁止本地 存储，你仍然可以切换当前页面的主题。&#xA;由谁处理 统计服务由 Cloudflare, Inc. 提供，其作为受托方代为处理请求数据，处理方式见 Cloudflare 隐私政策。本站托管在 GitHub Pages 上，托管环节产生的请求日志见 GitHub 隐私声明。&#xA;保留多久 汇总统计数据最长保留 13 个月，且不会因为新的访问而自动续期。&#xA;如何反对 保存在本地的外观偏好不会识别你的身份，也不会追踪你的访问。如果你仍然不希望被 计入汇总统计，可以：&#xA;在浏览器中开启 Do Not Track 或 Global Privacy Control；或 发邮件到 zili.tan@student.uva.nl，我会把你的 访问排除在外。 对以上任何内容有疑问，也欢迎用同一邮箱联系我。本页最后更新于 2026 年 10 月 2 日。</description>
-    </item>
-    <item>
-      <title>简历</title>
-      <link>https://runetan.github.io/zh/cv/</link>
-      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>https://runetan.github.io/zh/cv/</guid>
-      <description>谭子立（Zili Tan） · zili.tan@student.uva.nl · runetan.github.io&#xA;最后更新：2026 年 10 月 5 日。&#xA;研究兴趣 自我改进 AI 系统、学习动力学、持续适应与神经网络架构。&#xA;教育经历 阿姆斯特丹大学与阿姆斯特丹自由大学（Vrije Universiteit Amsterdam） — 物理与天文学（Physics and Astronomy）联合硕士，理论物理方向，2025 年 9 月 – 2027 年 6 月（预计毕业）。&#xA;GPA：4.0/4.0 中山大学 — 理学学士（物理学），2021 年 9 月 – 2025 年 7 月。&#xA;GPA：3.7/4.0 论文与预印本 Meng Bi, Jinhai Yang, Zili Tan, Bowei He, Hong Huang, and Xue Liu. Wright–Gödel Machine: Mitigating Homogenization in Self-Improving Agents. ICLR 2027 审稿中。&#xA;研究经历 用于大型强子对撞机（LHC）SMEFT 事例生成的 AI 智能体工作流（Agentic AI Workflows for SMEFT Event Generation at the LHC） 硕士学位论文，导师：Wouter Verkerke 教授，Nikhef / 阿姆斯特丹大学，2026 年 10 月至今。</description>
     </item>
     <item>
       <title>Yunnan, China</title>

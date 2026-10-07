@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2024-2026 Zili Tan</copyright>
-    <lastBuildDate>Mon, 05 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://runetan.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Privacy</title>
@@ -15,13 +15,6 @@
       <pubDate>Sun, 13 Sep 2026 00:00:00 +0000</pubDate>
       <guid>https://runetan.github.io/privacy/</guid>
       <description>This site collects anonymous, aggregate statistics about how it is used. It does not identify visitors, it sets no cookies, and there is no cookie banner because there is nothing to ask consent for.&#xA;What is collected Visitor statistics are provided by Cloudflare Web Analytics, a cookieless analytics service. For each page view it records:&#xA;the page that was viewed, and the referring domain (not the full referring URL); an approximate country, derived from the request; device type, browser and operating system; the time of the visit.</description>
-    </item>
-    <item>
-      <title>CV</title>
-      <link>https://runetan.github.io/cv/</link>
-      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>https://runetan.github.io/cv/</guid>
-      <description>Zili Tan · zili.tan@student.uva.nl · runetan.github.io&#xA;Last updated: 5 October 2026.&#xA;Research Interests Self-Improving AI Systems, Learning Dynamics, Continual Adaptation, and Neural Architectures.&#xA;Academic Background University of Amsterdam &amp;amp; Vrije Universiteit Amsterdam — MSc Physics and Astronomy (joint degree), Theoretical Physics track, 09/2025 – 06/2027 (expected).&#xA;GPA: 4.0/4.0 Sun Yat-sen University — Bachelor of Science in Physics, 09/2021 – 07/2025.&#xA;GPA: 3.7/4.0 Publications &amp;amp; Preprints Meng Bi, Jinhai Yang, Zili Tan, Bowei He, Hong Huang, and Xue Liu.</description>
     </item>
     <item>
       <title>Yunnan, China</title>
