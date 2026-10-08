@@ -178,6 +178,12 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
                 margin-bottom: 0.7rem;
             }
             .home-content h2:first-child { margin-top: 0; }
+            .home-content h3 {
+                font-size: 1.05rem;
+                letter-spacing: normal;
+                margin-top: 1.3rem;
+                margin-bottom: 0.65rem;
+            }
             .home-content p { margin-bottom: 1rem; }
         </style>
         <main class="home-content pl-sm-4 ml-sm-5">
@@ -187,11 +193,22 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
 <h2 id="paper">Paper</h2>
 <p>Meng Bi, Jinhai Yang, <strong>Zili Tan</strong>, Bowei He, Hong Huang, and Xue Liu. <em>Wright–Gödel Machine: Mitigating Homogenization in Self-Improving Agents.</em> Under review at ICLR 2027.</p>
 <h2 id="research-interests">Research Interests</h2>
-<p>I am interested in how AI systems can continue learning and adapting, especially when their previous learning or decisions begin to limit what they can do next. My interests centre on the following questions.</p>
-<p><strong>Revising assumptions during reasoning.</strong> Can an AI system recognize when its assumptions become inadequate, identify which ones are responsible, and revise them as its reasoning unfolds? My background in theoretical physics motivates this question: resolving unphysical solutions or apparent paradoxes can require revisiting the premises of a derivation. Such revisions are constrained by physical intuition, self-consistency, known principles, and experimental evidence. I would like to explore the architectural mechanisms and training methods that could support this ability in AI, and how to evaluate newly proposed assumptions.</p>
-<p><strong>Beneficial degradation.</strong> Could temporarily making a system worse help it improve further in the long run? In iterative self-improvement, I am interested in whether such degradation can help a system escape its current path and explore new possibilities, without simply returning to a previous state. A central question is when and why this might help, and how to distinguish it from changes that merely reduce performance.</p>
-<p><strong>Multi-agent interaction and emergent behavior.</strong> I am also interested in how agents with different preferences learn to cooperate on shared tasks. Through repeated interaction, could they develop specialized roles, form groups, or show other unexpected behaviors without predefined roles? This is a less developed direction that I would like to explore as the agents continue learning.</p>
-<p>My recent work has focused on <em>genetic homogenization</em> in recursively self-improving coding agents, where repeated improvement can lead to a loss of design diversity. I am also pursuing an MSc thesis on agentic AI workflows for SMEFT event generation at the LHC. These interests are still developing; my current priority is to gain more hands-on experience with machine learning and turn some of these questions into concrete experiments.</p>
+<p>I am interested in how AI systems can continue learning and adapting, especially when their previous learning or decisions begin to limit what they can do next. Some questions I would like to explore are:</p>
+<h3 id="revising-assumptions-during-reasoning">Revising Assumptions During Reasoning</h3>
+<p>Can an AI system recognize when its current assumptions become inadequate, revise them, or introduce new ones as its reasoning unfolds?</p>
+<p>This interest comes partly from my background in theoretical physics. We may begin from an established theory and derive a description of a physical system, yet still arrive at unphysical solutions or apparent paradoxes. In such cases, progress may require us to reconsider the assumptions behind the derivation or introduce new ones. Importantly, such revisions are not chosen simply because they make the formal calculation work. They are constrained by physical intuition, self-consistency, known principles, and experimental evidence. This makes theoretical physics a particularly interesting example of reasoning in which the premises themselves may become objects of reasoning.</p>
+<p>I would like to understand whether AI systems can develop a similar ability: to identify which assumptions are responsible when a reasoning process fails, generate meaningful alternatives, and continue reasoning under the revised assumptions. I am especially interested in what kinds of architectural mechanisms could support this ability, how it might be improved through training, and how the quality of newly proposed assumptions could be evaluated.</p>
+<h3 id="beneficial-degradation">Beneficial Degradation</h3>
+<p>In iterative self-improvement, we usually expect a system to preserve what it has already achieved. But could temporarily making a system worse sometimes help it improve further in the long run?</p>
+<p>I am interested in whether such <em>beneficial degradation</em> could help a system escape its current path of improvement and explore new possibilities. The resulting state would not necessarily resemble any of its previous states.</p>
+<p>An important question is when and why such degradation might be beneficial, and how we can distinguish it from changes that simply make the system worse.</p>
+<h3 id="multi-agent-interaction-and-emergent-behavior">Multi-Agent Interaction and Emergent Behavior</h3>
+<p>Another, less developed idea concerns what happens when agents with different preferences have to cooperate.</p>
+<p>For example, if two agents are trained with different preferences but must complete a shared task, how will their behavior change through repeated interaction? What if we introduce a larger group, give some agents different preferences, and let them cooperate without predefined roles? Would they develop specialized roles, form groups, or show other unexpected behaviors?</p>
+<p>I am interested in how these patterns might emerge and change as the agents continue learning.</p>
+<h3 id="current-work">Current Work</h3>
+<p>My recent work has focused on <em>genetic homogenization</em> in recursively self-improving coding agents, where repeated improvement can lead to a loss of design diversity. I am also pursuing an MSc thesis on agentic AI workflows for SMEFT event generation at the LHC.</p>
+<p>These interests are still developing. My current priority is to gain more hands-on experience with machine learning and turn some of these questions into concrete experiments.</p>
 
         </main>
     
