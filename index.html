@@ -169,12 +169,31 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
 </header>
 <div class="container">
     
-    
-        <div class="pl-sm-4 ml-sm-5">
-            <p>I am Zili Tan, a physics graduate of Sun Yat-sen University (BSc, 2021–2025) and currently an MSc student in the joint Physics and Astronomy programme (Theoretical Physics track) at the University of Amsterdam and Vrije Universiteit Amsterdam (2025–2027, expected). My research interests are self-improving AI systems, learning dynamics, continual adaptation, and neural architectures.</p>
-<p>This site hosts my photography — see <a href="/photos/">Photos</a>. A full curriculum vitae is available on the <a href="/cv/">CV</a> page.</p>
+        <style>
+            .home-content { line-height: 1.65; }
+            .home-content h2 {
+                font-size: 1.25rem;
+                letter-spacing: normal;
+                margin-top: 1.8rem;
+                margin-bottom: 0.7rem;
+            }
+            .home-content h2:first-child { margin-top: 0; }
+            .home-content p { margin-bottom: 1rem; }
+        </style>
+        <main class="home-content pl-sm-4 ml-sm-5">
+            <h2 id="education">Education</h2>
+<p><strong>University of Amsterdam &amp; Vrije Universiteit Amsterdam</strong> — MSc in Physics and Astronomy (joint degree), Theoretical Physics track. September 2025–June 2027 (expected).</p>
+<p><strong>Sun Yat-sen University</strong> — BSc in Physics. September 2021–July 2025.</p>
+<h2 id="paper">Paper</h2>
+<p>Meng Bi, Jinhai Yang, <strong>Zili Tan</strong>, Bowei He, Hong Huang, and Xue Liu. <em>Wright–Gödel Machine: Mitigating Homogenization in Self-Improving Agents.</em> Under review at ICLR 2027.</p>
+<h2 id="research-interests">Research Interests</h2>
+<p>I am interested in how AI systems can continue learning and adapting, especially when their previous learning or decisions begin to limit what they can do next. My interests centre on the following questions.</p>
+<p><strong>Revising assumptions during reasoning.</strong> Can an AI system recognize when its assumptions become inadequate, identify which ones are responsible, and revise them as its reasoning unfolds? My background in theoretical physics motivates this question: resolving unphysical solutions or apparent paradoxes can require revisiting the premises of a derivation. Such revisions are constrained by physical intuition, self-consistency, known principles, and experimental evidence. I would like to explore the architectural mechanisms and training methods that could support this ability in AI, and how to evaluate newly proposed assumptions.</p>
+<p><strong>Beneficial degradation.</strong> Could temporarily making a system worse help it improve further in the long run? In iterative self-improvement, I am interested in whether such degradation can help a system escape its current path and explore new possibilities, without simply returning to a previous state. A central question is when and why this might help, and how to distinguish it from changes that merely reduce performance.</p>
+<p><strong>Multi-agent interaction and emergent behavior.</strong> I am also interested in how agents with different preferences learn to cooperate on shared tasks. Through repeated interaction, could they develop specialized roles, form groups, or show other unexpected behaviors without predefined roles? This is a less developed direction that I would like to explore as the agents continue learning.</p>
+<p>My recent work has focused on <em>genetic homogenization</em> in recursively self-improving coding agents, where repeated improvement can lead to a loss of design diversity. I am also pursuing an MSc thesis on agentic AI workflows for SMEFT event generation at the LHC. These interests are still developing; my current priority is to gain more hands-on experience with machine learning and turn some of these questions into concrete experiments.</p>
 
-        </div>
+        </main>
     
 
             </div>
