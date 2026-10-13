@@ -185,29 +185,94 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
                 margin-bottom: 0.65rem;
             }
             .home-content p { margin-bottom: 1rem; }
+            .research-interest {
+                border-bottom: 1px solid rgba(127, 127, 127, 0.35);
+            }
+            .research-interest summary {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0.75rem;
+                padding: 0.8rem 0;
+                font-size: 1.05rem;
+                font-weight: 700;
+                cursor: pointer;
+                list-style: none;
+            }
+            .research-interest summary::-webkit-details-marker { display: none; }
+            .research-interest summary:focus-visible {
+                outline: 2px solid currentColor;
+                outline-offset: 3px;
+            }
+            .research-interest-chevron {
+                width: 1rem;
+                height: 1rem;
+                flex-shrink: 0;
+            }
+            .research-interest[open] .research-interest-chevron { transform: rotate(90deg); }
+            .research-interest-body { padding-top: 0.25rem; }
+            .research-interest:last-of-type { margin-bottom: 1rem; }
         </style>
         <main class="home-content pl-sm-4 ml-sm-5">
             <h2 id="education">Education</h2>
 <p><strong>University of Amsterdam &amp; Vrije Universiteit Amsterdam</strong> — MSc in Physics and Astronomy (joint degree), Theoretical Physics track. September 2025–June 2027 (expected).</p>
 <p><strong>Sun Yat-sen University</strong> — BSc in Physics. September 2021–July 2025.</p>
-<h2 id="paper">Paper</h2>
+<h2 id="papers--preprints">Papers &amp; Preprints</h2>
 <p>Meng Bi, Jinhai Yang, <strong>Zili Tan</strong>, Bowei He, Hong Huang, and Xue Liu. <em>Wright–Gödel Machine: Mitigating Homogenization in Self-Improving Agents.</em> Under review at ICLR 2027.</p>
+<p>My recent work has focused on <em>genetic homogenization</em> in recursively self-improving coding agents, where repeated improvement can lead to a loss of design diversity.</p>
+<p><a href="/papers/mitigating-genetic-homogenization.pdf">Read the paper (PDF)</a> · <a href="https://github.com/RuneTan/Mitigating-Genetic-Homogenization-in-Self-Improving-Agents">GitHub manuscript repository</a></p>
+<h2 id="msc-thesis-project">MSc Thesis Project</h2>
+<h3 id="agentic-ai-workflows-for-smeft-event-generation-at-the-lhc">Agentic AI Workflows for SMEFT Event Generation at the LHC</h3>
+<p><em>In progress · Advisor: Prof. Wouter Verkerke, Nikhef / University of Amsterdam</em></p>
+<p>My MSc thesis explores agentic AI workflows for SMEFT event generation at the LHC. The goal is to translate physics-level analysis requests into Monte Carlo pipelines using SMEFTsim, MadGraph, Pythia, and Delphes, with automated failure diagnosis and physics-aware validation.</p>
+<p>As preparation for this project, I have developed a <a href="https://github.com/RuneTan/smeftsim-learning">SMEFTsim learning tutorial</a>: a bilingual guide covering Linux setup, SM event generation, ROOT analysis, and SMEFT reweighting, with locally generated examples.</p>
 <h2 id="research-interests">Research Interests</h2>
 <p>I am interested in how AI systems can continue learning and adapting, especially when their previous learning or decisions begin to limit what they can do next. Some questions I would like to explore are:</p>
-<h3 id="revising-assumptions-during-reasoning">Revising Assumptions During Reasoning</h3>
-<p>Can an AI system recognize when its current assumptions become inadequate, revise them, or introduce new ones as its reasoning unfolds?</p>
+<details class="research-interest">
+    <summary>
+        <span>Revising Assumptions During Reasoning</span>
+        <svg class="research-interest-chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+            <path d="M6 3 L11 8 L6 13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </summary>
+    <div class="research-interest-body">
+        <p>Can an AI system recognize when its current assumptions become inadequate, revise them, or introduce new ones as its reasoning unfolds?</p>
 <p>This interest comes partly from my background in theoretical physics. We may begin from an established theory and derive a description of a physical system, yet still arrive at unphysical solutions or apparent paradoxes. In such cases, progress may require us to reconsider the assumptions behind the derivation or introduce new ones. Importantly, such revisions are not chosen simply because they make the formal calculation work. They are constrained by physical intuition, self-consistency, known principles, and experimental evidence. This makes theoretical physics a particularly interesting example of reasoning in which the premises themselves may become objects of reasoning.</p>
 <p>I would like to understand whether AI systems can develop a similar ability: to identify which assumptions are responsible when a reasoning process fails, generate meaningful alternatives, and continue reasoning under the revised assumptions. I am especially interested in what kinds of architectural mechanisms could support this ability, how it might be improved through training, and how the quality of newly proposed assumptions could be evaluated.</p>
-<h3 id="beneficial-degradation">Beneficial Degradation</h3>
-<p>In iterative self-improvement, we usually expect a system to preserve what it has already achieved. But could temporarily making a system worse sometimes help it improve further in the long run?</p>
+
+    </div>
+</details>
+
+<details class="research-interest">
+    <summary>
+        <span>Beneficial Degradation</span>
+        <svg class="research-interest-chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+            <path d="M6 3 L11 8 L6 13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </summary>
+    <div class="research-interest-body">
+        <p>In iterative self-improvement, we usually expect a system to preserve what it has already achieved. But could temporarily making a system worse sometimes help it improve further in the long run?</p>
 <p>I am interested in whether such <em>beneficial degradation</em> could help a system escape its current path of improvement and explore new possibilities. The resulting state would not necessarily resemble any of its previous states.</p>
 <p>An important question is when and why such degradation might be beneficial, and how we can distinguish it from changes that simply make the system worse.</p>
-<h3 id="multi-agent-interaction-and-emergent-behavior">Multi-Agent Interaction and Emergent Behavior</h3>
-<p>Another, less developed idea concerns what happens when agents with different preferences have to cooperate.</p>
+
+    </div>
+</details>
+
+<details class="research-interest">
+    <summary>
+        <span>Multi-Agent Interaction and Emergent Behavior</span>
+        <svg class="research-interest-chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+            <path d="M6 3 L11 8 L6 13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </summary>
+    <div class="research-interest-body">
+        <p>Another, less developed idea concerns what happens when agents with different preferences have to cooperate.</p>
 <p>For example, if two agents are trained with different preferences but must complete a shared task, how will their behavior change through repeated interaction? What if we introduce a larger group, give some agents different preferences, and let them cooperate without predefined roles? Would they develop specialized roles, form groups, or show other unexpected behaviors?</p>
 <p>I am interested in how these patterns might emerge and change as the agents continue learning.</p>
-<h3 id="current-work">Current Work</h3>
-<p>My recent work has focused on <em>genetic homogenization</em> in recursively self-improving coding agents, where repeated improvement can lead to a loss of design diversity. I am also pursuing an MSc thesis on agentic AI workflows for SMEFT event generation at the LHC.</p>
+
+    </div>
+</details>
+
 <p>These interests are still developing. My current priority is to gain more hands-on experience with machine learning and turn some of these questions into concrete experiments.</p>
 
         </main>

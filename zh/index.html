@@ -185,29 +185,94 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
                 margin-bottom: 0.65rem;
             }
             .home-content p { margin-bottom: 1rem; }
+            .research-interest {
+                border-bottom: 1px solid rgba(127, 127, 127, 0.35);
+            }
+            .research-interest summary {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0.75rem;
+                padding: 0.8rem 0;
+                font-size: 1.05rem;
+                font-weight: 700;
+                cursor: pointer;
+                list-style: none;
+            }
+            .research-interest summary::-webkit-details-marker { display: none; }
+            .research-interest summary:focus-visible {
+                outline: 2px solid currentColor;
+                outline-offset: 3px;
+            }
+            .research-interest-chevron {
+                width: 1rem;
+                height: 1rem;
+                flex-shrink: 0;
+            }
+            .research-interest[open] .research-interest-chevron { transform: rotate(90deg); }
+            .research-interest-body { padding-top: 0.25rem; }
+            .research-interest:last-of-type { margin-bottom: 1rem; }
         </style>
         <main class="home-content pl-sm-4 ml-sm-5">
             <h2 id="教育经历">教育经历</h2>
 <p><strong>阿姆斯特丹大学与阿姆斯特丹自由大学（Vrije Universiteit Amsterdam）</strong> — 物理与天文学联合硕士，理论物理方向。2025 年 9 月–2027 年 6 月（预计）。</p>
 <p><strong>中山大学</strong> — 物理学学士。2021 年 9 月–2025 年 7 月。</p>
-<h2 id="论文">论文</h2>
+<h2 id="论文与预印本">论文与预印本</h2>
 <p>Meng Bi, Jinhai Yang, <strong>Zili Tan</strong>, Bowei He, Hong Huang, and Xue Liu. <em>Wright–Gödel Machine: Mitigating Homogenization in Self-Improving Agents.</em> ICLR 2027 审稿中。</p>
+<p>我近期主要研究递归自我改进的编程智能体中的“遗传同质化”（genetic homogenization）。这些智能体在反复改进的过程中，可能逐渐失去设计多样性。</p>
+<p><a href="/papers/mitigating-genetic-homogenization.pdf">阅读论文（PDF）</a> · <a href="https://github.com/RuneTan/Mitigating-Genetic-Homogenization-in-Self-Improving-Agents">GitHub 文稿仓库</a></p>
+<h2 id="硕士论文项目">硕士论文项目</h2>
+<h3 id="面向-lhc-的-smeft-事件生成智能体-ai-工作流">面向 LHC 的 SMEFT 事件生成：智能体 AI 工作流</h3>
+<p><em>进行中 · 导师：Wouter Verkerke 教授，Nikhef / 阿姆斯特丹大学</em></p>
+<p>我的硕士论文研究探索如何利用智能体 AI 工作流完成 LHC 的 SMEFT 事件生成。目标是将物理分析需求转化为使用 SMEFTsim、MadGraph、Pythia 和 Delphes 的蒙特卡洛流程，并通过自动故障诊断和物理检验提高流程的可靠性。</p>
+<p>作为项目准备，我整理了 <a href="https://github.com/RuneTan/smeftsim-learning">SMEFTsim 学习教程</a>。这份中英双语教程介绍 Linux 环境配置、标准模型事件生成、ROOT 分析和 SMEFT 重加权，并提供了本地生成的示例结果。</p>
 <h2 id="研究兴趣">研究兴趣</h2>
 <p>我关注 AI 系统的持续学习与适应。其中，我尤其想了解：当过去的学习或决策开始限制系统后续的能力时，它如何继续学习和适应？具体而言，我希望探索以下问题：</p>
-<h3 id="在推理过程中修正假设">在推理过程中修正假设</h3>
-<p>在推理过程中，AI 系统能否发现当前的假设已不再适用，并据此修正假设或引入新的假设？</p>
+<details class="research-interest">
+    <summary>
+        <span>在推理过程中修正假设</span>
+        <svg class="research-interest-chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+            <path d="M6 3 L11 8 L6 13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </summary>
+    <div class="research-interest-body">
+        <p>在推理过程中，AI 系统能否发现当前的假设已不再适用，并据此修正假设或引入新的假设？</p>
 <p>这一兴趣部分源于我的理论物理背景。即使从已有的理论出发，推导某个物理系统的描述，我们仍可能得到非物理解或看似矛盾的结果。遇到这种情况时，要继续推进研究，就可能需要重新审视推导所依赖的假设，或引入新的假设。不过，修正假设不能只以让计算在形式上成立为依据，还必须受到物理直觉、自洽性、已知原理和实验证据的约束。在理论物理中，推理所依赖的前提本身也可能成为推理的对象；这使它成为研究这种推理方式的一个很有意思的例子。</p>
 <p>我希望了解 AI 系统能否具备类似的能力：在推理失败时，找出导致问题的假设，提出有意义的替代假设，并在修正后的假设下继续推理。我尤其关心三个问题：哪些架构机制能够支持这种能力，如何通过训练提升这种能力，以及如何评估系统新提出的假设的质量。</p>
-<h3 id="有益的退化">有益的退化</h3>
-<p>在迭代式自我改进中，我们通常希望系统保留已经取得的成果。但暂时让系统表现得更差，是否有时反而有助于它在长期继续改进？</p>
+
+    </div>
+</details>
+
+<details class="research-interest">
+    <summary>
+        <span>有益的退化</span>
+        <svg class="research-interest-chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+            <path d="M6 3 L11 8 L6 13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </summary>
+    <div class="research-interest-body">
+        <p>在迭代式自我改进中，我们通常希望系统保留已经取得的成果。但暂时让系统表现得更差，是否有时反而有助于它在长期继续改进？</p>
 <p>我想了解这种“有益的退化”（beneficial degradation）能否帮助系统跳出当前的改进路径，探索新的可能性。由此产生的状态，未必与系统先前的任何状态相似。</p>
 <p>这里的一个重要问题是：这种退化在什么情况下会有益，为什么会有益？我们又该如何区分有益的退化与单纯让系统变差的变化？</p>
-<h3 id="多智能体交互与涌现行为">多智能体交互与涌现行为</h3>
-<p>另外，我还有一个尚处于初步阶段的想法，涉及具有不同偏好的智能体之间的合作。</p>
+
+    </div>
+</details>
+
+<details class="research-interest">
+    <summary>
+        <span>多智能体交互与涌现行为</span>
+        <svg class="research-interest-chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+            <path d="M6 3 L11 8 L6 13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </summary>
+    <div class="research-interest-body">
+        <p>另外，我还有一个尚处于初步阶段的想法，涉及具有不同偏好的智能体之间的合作。</p>
 <p>例如，如果我们按不同的偏好训练两个智能体，再要求它们共同完成一项任务，它们的行为会如何随着反复交互而改变？如果把合作扩展到更大的群体，为其中一些智能体设定不同的偏好，并且不预先分配角色，又会发生什么？它们会形成专门的分工、组成群体，或表现出其他意料之外的行为吗？</p>
 <p>随着智能体不断学习，这些模式会如何产生和变化，也是我想了解的问题。</p>
-<h3 id="当前工作">当前工作</h3>
-<p>我近期主要研究递归自我改进的编程智能体中的“遗传同质化”（genetic homogenization）。这些智能体在反复改进的过程中，可能逐渐失去设计多样性。我的硕士论文研究则围绕智能体 AI 工作流展开，目标是将其用于大型强子对撞机（LHC）的标准模型有效场论（SMEFT）事件生成。</p>
+
+    </div>
+</details>
+
 <p>这些研究兴趣仍在逐步形成。目前，我的首要任务是积累更多机器学习实践经验，并将其中一些问题转化为具体的实验。</p>
 
         </main>
