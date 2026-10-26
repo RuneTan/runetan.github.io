@@ -185,6 +185,34 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
                 margin-bottom: 0.65rem;
             }
             .home-content p { margin-bottom: 1rem; }
+            .education-entry {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) max-content;
+                grid-template-areas: "institution dates" "degree degree";
+                gap: 0.15rem 1.5rem;
+                margin-bottom: 1.1rem;
+            }
+            .education-institution { grid-area: institution; }
+            .education-dates {
+                grid-area: dates;
+                justify-self: end;
+                font-size: 0.95em;
+                font-style: italic;
+                text-align: right;
+            }
+            .home-content .education-degree {
+                grid-area: degree;
+                margin: 0;
+                font-style: italic;
+            }
+            @media (max-width: 640px) {
+                .education-entry {
+                    grid-template-columns: minmax(0, 1fr);
+                    grid-template-areas: "institution" "degree" "dates";
+                    row-gap: 0.25rem;
+                }
+                .education-dates { max-width: 100%; }
+            }
             .research-interest {
                 border-bottom: 1px solid rgba(127, 127, 127, 0.35);
             }
@@ -215,8 +243,18 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
         </style>
         <main class="home-content pl-sm-4 ml-sm-5">
             <h2 id="education">Education</h2>
-<p><strong>University of Amsterdam &amp; Vrije Universiteit Amsterdam</strong> — MSc in Physics and Astronomy (joint degree), Theoretical Physics track. September 2025–June 2027 (expected).</p>
-<p><strong>Sun Yat-sen University</strong> — BSc in Physics. September 2021–July 2025.</p>
+<div class="education-entry">
+    <strong class="education-institution">University of Amsterdam &amp; Vrije Universiteit Amsterdam</strong>
+    <span class="education-dates">09/2025–06/2027 (expected)</span>
+    <p class="education-degree">MSc in Physics and Astronomy (joint degree), Theoretical Physics track</p>
+</div>
+
+<div class="education-entry">
+    <strong class="education-institution">Sun Yat-sen University</strong>
+    <span class="education-dates">09/2021–07/2025</span>
+    <p class="education-degree">BSc in Physics</p>
+</div>
+
 <h2 id="papers--preprints">Papers &amp; Preprints</h2>
 <p>Meng Bi, Jinhai Yang, <strong>Zili Tan</strong>, Bowei He, Hong Huang, and Xue Liu. <em>Wright–Gödel Machine: Mitigating Homogenization in Self-Improving Agents.</em> Under review at ICLR 2027.</p>
 <p><a href="/papers/mitigating-genetic-homogenization.pdf">Read the paper (PDF)</a> · <a href="https://github.com/RuneTan/Mitigating-Genetic-Homogenization-in-Self-Improving-Agents">GitHub manuscript repository</a></p>

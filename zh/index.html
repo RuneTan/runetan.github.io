@@ -185,6 +185,34 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
                 margin-bottom: 0.65rem;
             }
             .home-content p { margin-bottom: 1rem; }
+            .education-entry {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) max-content;
+                grid-template-areas: "institution dates" "degree degree";
+                gap: 0.15rem 1.5rem;
+                margin-bottom: 1.1rem;
+            }
+            .education-institution { grid-area: institution; }
+            .education-dates {
+                grid-area: dates;
+                justify-self: end;
+                font-size: 0.95em;
+                font-style: italic;
+                text-align: right;
+            }
+            .home-content .education-degree {
+                grid-area: degree;
+                margin: 0;
+                font-style: italic;
+            }
+            @media (max-width: 640px) {
+                .education-entry {
+                    grid-template-columns: minmax(0, 1fr);
+                    grid-template-areas: "institution" "degree" "dates";
+                    row-gap: 0.25rem;
+                }
+                .education-dates { max-width: 100%; }
+            }
             .research-interest {
                 border-bottom: 1px solid rgba(127, 127, 127, 0.35);
             }
@@ -215,8 +243,18 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
         </style>
         <main class="home-content pl-sm-4 ml-sm-5">
             <h2 id="教育经历">教育经历</h2>
-<p><strong>阿姆斯特丹大学与阿姆斯特丹自由大学（Vrije Universiteit Amsterdam）</strong> — 物理与天文学联合硕士，理论物理方向。2025 年 9 月–2027 年 6 月（预计）。</p>
-<p><strong>中山大学</strong> — 物理学学士。2021 年 9 月–2025 年 7 月。</p>
+<div class="education-entry">
+    <strong class="education-institution">阿姆斯特丹大学与阿姆斯特丹自由大学</strong>
+    <span class="education-dates">2025.09–2027.06（预计）</span>
+    <p class="education-degree">物理与天文学联合硕士，理论物理方向</p>
+</div>
+
+<div class="education-entry">
+    <strong class="education-institution">中山大学</strong>
+    <span class="education-dates">2021.09–2025.07</span>
+    <p class="education-degree">物理学学士</p>
+</div>
+
 <h2 id="论文与预印本">论文与预印本</h2>
 <p>Meng Bi, Jinhai Yang, <strong>Zili Tan</strong>, Bowei He, Hong Huang, and Xue Liu. <em>Wright–Gödel Machine: Mitigating Homogenization in Self-Improving Agents.</em> ICLR 2027 审稿中。</p>
 <p><a href="/papers/mitigating-genetic-homogenization.pdf">阅读论文（PDF）</a> · <a href="https://github.com/RuneTan/Mitigating-Genetic-Homogenization-in-Self-Improving-Agents">GitHub 文稿仓库</a></p>
