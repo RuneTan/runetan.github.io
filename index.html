@@ -265,10 +265,25 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
 <h2 id="msc-thesis-project">MSc Thesis Project</h2>
 <h3 id="agentic-ai-workflows-for-smeft-event-generation-at-the-lhc">Agentic AI Workflows for SMEFT Event Generation at the LHC</h3>
 <p><em>In progress · Advisor: Prof. Wouter Verkerke, Nikhef / University of Amsterdam</em></p>
-<p>I built a single-agent prototype that turns physics requests into MadGraph configurations, generates leading-order parton-level SMEFT samples, and checks the outputs. In four paired tests, the workflow with automated checks and review delivered samples matching all four requests; with those steps disabled, none matched.</p>
-<p><a href="https://github.com/RuneTan/smeftsim-learning">SMEFTsim tutorial</a> · <a href="https://github.com/RuneTan/detector-learning">Detector-simulation tutorial</a></p>
+<p>I built a single-agent workflow that translates physics requests into MadGraph configurations, generates leading-order parton-level SMEFT samples, and checks the output. In four paired pilot tests, it delivered a matching sample for each request with checks and review enabled, and none with those steps disabled. The public version passed 293 regression tests in a fresh Linux environment and completed a 100-event end-to-end test.</p>
+<p><a href="https://github.com/RuneTan/simulations-single-agentic-workflow">Simulation workflow (GitHub)</a> · <a href="https://github.com/RuneTan/smeftsim-learning">SMEFTsim tutorial</a> · <a href="https://github.com/RuneTan/detector-learning">Detector-simulation tutorial</a></p>
 <h2 id="research-interests">Research Interests</h2>
 <p>Self-Improving AI Systems, Learning Dynamics, Adaptive Reasoning, and Multi-Agent Interaction. Some questions I would like to explore are:</p>
+<details class="research-interest">
+    <summary>
+        <span>Continual Learning under Resource Constraints (In Progress)</span>
+        <svg class="research-interest-chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+            <path d="M6 3 L11 8 L6 13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </summary>
+    <div class="research-interest-body">
+        <p>MemTurn is a research prototype for studying how agents learn from a stream of tasks under fixed memory and compute budgets. The public repository contains the implementation, documentation, and offline tests. The latest update simplifies how the prototype checks and selects experiences for learning.</p>
+<p>The next step is to measure cumulative task performance and whether earlier experience still helps when familiar situations return or new tasks arrive, using comparisons under matched resource limits.</p>
+<p><a href="https://github.com/RuneTan/MemTurn">MemTurn (GitHub)</a></p>
+
+    </div>
+</details>
+
 <details class="research-interest">
     <summary>
         <span>Revising Assumptions During Reasoning</span>
@@ -280,20 +295,6 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
         <p>Can an AI system recognize when its current assumptions become inadequate, revise them, or introduce new ones as its reasoning unfolds?</p>
 <p>This interest comes partly from my background in theoretical physics. We may begin from an established theory and derive a description of a physical system, yet still arrive at unphysical solutions or apparent paradoxes. In such cases, progress may require us to reconsider the assumptions behind the derivation or introduce new ones. Importantly, such revisions are not chosen simply because they make the formal calculation work. They are constrained by physical intuition, self-consistency, known principles, and experimental evidence. This makes theoretical physics a particularly interesting example of reasoning in which the premises themselves may become objects of reasoning.</p>
 <p>I would like to understand whether AI systems can develop a similar ability: to identify which assumptions are responsible when a reasoning process fails, generate meaningful alternatives, and continue reasoning under the revised assumptions. I am especially interested in what kinds of architectural mechanisms could support this ability, how it might be improved through training, and how the quality of newly proposed assumptions could be evaluated.</p>
-
-    </div>
-</details>
-
-<details class="research-interest">
-    <summary>
-        <span>Continual Learning under Resource Constraints (In Progress)</span>
-        <svg class="research-interest-chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-            <path d="M6 3 L11 8 L6 13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-    </summary>
-    <div class="research-interest-body">
-        <p>I study how AI agents can keep learning from experience as tasks change, within fixed memory and compute budgets. A central question is whether earlier experience remains useful after many intervening tasks, both when familiar situations return and when the agent faces new ones.</p>
-<p>I have built and locally tested a research prototype and designed controlled experiments under matched resource limits. These experiments will measure cumulative task performance and how much past experience helps agents adapt to later tasks.</p>
 
     </div>
 </details>

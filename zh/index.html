@@ -265,10 +265,25 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
 <h2 id="硕士论文项目">硕士论文项目</h2>
 <h3 id="面向-lhc-的-smeft-事件生成智能体-ai-工作流">面向 LHC 的 SMEFT 事件生成：智能体 AI 工作流</h3>
 <p><em>进行中 · 导师：Wouter Verkerke 教授，Nikhef / 阿姆斯特丹大学</em></p>
-<p>我已搭建单智能体原型，可将物理需求转成 MadGraph 配置，生成最低阶的部分子层级 SMEFT 事件样本，并检查输出。四组配对测试中，启用自动校验和复核时，四项任务均交付了符合请求的样本；停用这些环节后，没有一项做到。</p>
-<p><a href="https://github.com/RuneTan/smeftsim-learning">SMEFTsim 教程</a> · <a href="https://github.com/RuneTan/detector-learning">探测器模拟教程</a></p>
+<p>我已搭建单智能体工作流，可将物理需求转成 MadGraph 配置，生成最低阶 SMEFT 部分子级事件样本，并检查输出。四组配对试验中，启用校验和复核时，四项任务均交付了符合请求的样本；停用这些环节后，没有一项做到。公开版本在全新的 Linux 环境中通过了 293 项回归测试，并完成了一次 100 事件的端到端测试。</p>
+<p><a href="https://github.com/RuneTan/simulations-single-agentic-workflow">模拟工作流（GitHub）</a> · <a href="https://github.com/RuneTan/smeftsim-learning">SMEFTsim 教程</a> · <a href="https://github.com/RuneTan/detector-learning">探测器模拟教程</a></p>
 <h2 id="研究兴趣">研究兴趣</h2>
 <p>我的研究兴趣包括自我改进 AI 系统、学习动力学、适应性推理和多智能体交互。我希望探索以下问题：</p>
+<details class="research-interest">
+    <summary>
+        <span>资源受限条件下的持续学习（进行中）</span>
+        <svg class="research-interest-chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+            <path d="M6 3 L11 8 L6 13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </summary>
+    <div class="research-interest-body">
+        <p>MemTurn 是一个研究原型，用于探索智能体如何在固定的记忆和计算预算下，从连续到来的任务中学习。公开仓库包含实现代码、文档和离线测试，最新更新简化了对经验的检查与选择。</p>
+<p>接下来将以相同的资源限制开展对照实验，评估整个任务流中的累计表现，以及经历其他任务后，早期经验能否帮助智能体应对再次出现的情境和新任务。</p>
+<p><a href="https://github.com/RuneTan/MemTurn">MemTurn（GitHub）</a></p>
+
+    </div>
+</details>
+
 <details class="research-interest">
     <summary>
         <span>在推理过程中修正假设</span>
@@ -280,20 +295,6 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
         <p>在推理过程中，AI 系统能否发现当前的假设已不再适用，并据此修正假设或引入新的假设？</p>
 <p>这一兴趣部分源于我的理论物理背景。即使从已有的理论出发，推导某个物理系统的描述，我们仍可能得到非物理解或看似矛盾的结果。遇到这种情况时，要继续推进研究，就可能需要重新审视推导所依赖的假设，或引入新的假设。不过，修正假设不能只以让计算在形式上成立为依据，还必须受到物理直觉、自洽性、已知原理和实验证据的约束。在理论物理中，推理所依赖的前提本身也可能成为推理的对象；这使它成为研究这种推理方式的一个很有意思的例子。</p>
 <p>我希望了解 AI 系统能否具备类似的能力：在推理失败时，找出导致问题的假设，提出有意义的替代假设，并在修正后的假设下继续推理。我尤其关心三个问题：哪些架构机制能够支持这种能力，如何通过训练提升这种能力，以及如何评估系统新提出的假设的质量。</p>
-
-    </div>
-</details>
-
-<details class="research-interest">
-    <summary>
-        <span>资源受限条件下的持续学习（进行中）</span>
-        <svg class="research-interest-chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-            <path d="M6 3 L11 8 L6 13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-    </summary>
-    <div class="research-interest-body">
-        <p>我研究的是，在记忆容量和计算预算有限的情况下，AI 智能体如何从不断变化的任务中持续学习。我尤其关心：经历了许多其他任务之后，早期积累的经验是否还能在旧情境重现时发挥作用，又能否帮助智能体适应新任务？</p>
-<p>目前，我已搭建研究原型并完成本地功能测试，也已设计好在相同资源限制下进行的对照实验。接下来将评估整个任务流中的累计表现，以及过去的经验能为后续适应带来多少帮助。</p>
 
     </div>
 </details>
