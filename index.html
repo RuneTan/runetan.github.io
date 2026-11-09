@@ -265,10 +265,10 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
 <h2 id="msc-thesis-project">MSc Thesis Project</h2>
 <h3 id="agentic-ai-workflows-for-smeft-event-generation-at-the-lhc">Agentic AI Workflows for SMEFT Event Generation at the LHC</h3>
 <p><em>In progress · Advisor: Prof. Wouter Verkerke, Nikhef / University of Amsterdam</em></p>
-<p>I built a single-agent workflow that translates physics requests into MadGraph configurations, generates leading-order parton-level SMEFT samples, and checks the output. In four paired pilot tests, it delivered a matching sample for each request with checks and review enabled, and none with those steps disabled. The public version passed 293 regression tests in a fresh Linux environment and completed a 100-event end-to-end test.</p>
+<p>This single-agent workflow takes a physics request, configures and runs MadGraph, and checks the resulting leading-order, parton-level SMEFT samples. In four paired pilot tests, all four requests produced matching samples with validation and review enabled; none did with those steps disabled. The public version has also passed 293 regression tests in a fresh Linux environment and completed an end-to-end test generating 100 events.</p>
 <p><a href="https://github.com/RuneTan/simulations-single-agentic-workflow">Simulation workflow (GitHub)</a> · <a href="https://github.com/RuneTan/smeftsim-learning">SMEFTsim tutorial</a> · <a href="https://github.com/RuneTan/detector-learning">Detector-simulation tutorial</a></p>
 <h2 id="research-interests">Research Interests</h2>
-<p>Self-Improving AI Systems, Learning Dynamics, Adaptive Reasoning, and Multi-Agent Interaction. Some questions I would like to explore are:</p>
+<p>I am interested in how AI systems learn, improve themselves, and adapt their reasoning, as well as how agents influence one another through interaction.</p>
 <details class="research-interest">
     <summary>
         <span>Continual Learning under Resource Constraints (In Progress)</span>
@@ -277,8 +277,8 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
         </svg>
     </summary>
     <div class="research-interest-body">
-        <p>MemTurn is a research prototype for studying how agents learn from a stream of tasks under fixed memory and compute budgets. The public repository contains the implementation, documentation, and offline tests. The latest update simplifies how the prototype checks and selects experiences for learning.</p>
-<p>The next step is to measure cumulative task performance and whether earlier experience still helps when familiar situations return or new tasks arrive, using comparisons under matched resource limits.</p>
+        <p>How can agents keep learning from experience when memory and compute are limited? I am exploring this question through MemTurn. The prototype, documentation, and offline tests are publicly available, with recent work focused on simplifying how experiences are checked and selected for learning.</p>
+<p>Next, I plan to compare methods under the same resource limits and measure their cumulative performance across a sequence of tasks. I also want to find out whether earlier experience remains useful after many intervening tasks, both in familiar situations and on new tasks.</p>
 <p><a href="https://github.com/RuneTan/MemTurn">MemTurn (GitHub)</a></p>
 
     </div>
@@ -292,9 +292,9 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
         </svg>
     </summary>
     <div class="research-interest-body">
-        <p>Can an AI system recognize when its current assumptions become inadequate, revise them, or introduce new ones as its reasoning unfolds?</p>
-<p>This interest comes partly from my background in theoretical physics. We may begin from an established theory and derive a description of a physical system, yet still arrive at unphysical solutions or apparent paradoxes. In such cases, progress may require us to reconsider the assumptions behind the derivation or introduce new ones. Importantly, such revisions are not chosen simply because they make the formal calculation work. They are constrained by physical intuition, self-consistency, known principles, and experimental evidence. This makes theoretical physics a particularly interesting example of reasoning in which the premises themselves may become objects of reasoning.</p>
-<p>I would like to understand whether AI systems can develop a similar ability: to identify which assumptions are responsible when a reasoning process fails, generate meaningful alternatives, and continue reasoning under the revised assumptions. I am especially interested in what kinds of architectural mechanisms could support this ability, how it might be improved through training, and how the quality of newly proposed assumptions could be evaluated.</p>
+        <p>When reasoning runs into difficulty, can an AI system recognize that the problem may lie in its assumptions and revise them or propose new ones?</p>
+<p>My background in theoretical physics offers one way to think about this. Even a derivation based on an established theory can lead to unphysical solutions or apparent contradictions. Alongside checking the derivation, we may need to revisit its assumptions, revise them, or introduce new ones. Any changes must be guided by physical intuition, self-consistency, known principles, and experimental evidence; making the calculation work is not enough. Reasoning sometimes requires us to examine the premises we started with.</p>
+<p>Could AI systems do something similar: identify assumptions that may be causing a problem, propose reasonable alternatives, and continue reasoning? What model architectures would help, how could training improve this ability, and how should we judge the quality of the new assumptions?</p>
 
     </div>
 </details>
@@ -307,14 +307,14 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
         </svg>
     </summary>
     <div class="research-interest-body">
-        <p>Another, less developed idea concerns what happens when agents with different preferences have to cooperate.</p>
-<p>For example, if two agents are trained with different preferences but must complete a shared task, how will their behavior change through repeated interaction? What if we introduce a larger group, give some agents different preferences, and let them cooperate without predefined roles? Would they develop specialized roles, form groups, or show other unexpected behaviors?</p>
-<p>I am interested in how these patterns might emerge and change as the agents continue learning.</p>
+        <p>How do agents with different preferences learn to work together? I am still developing this idea.</p>
+<p>Suppose two agents develop different preferences during training. How would their behavior change through repeated cooperation? In a larger group, with differing preferences and no assigned roles, would a division of labor or subgroups emerge? What other unexpected behaviors might appear?</p>
+<p>How would these patterns take shape and change as the agents continue learning?</p>
 
     </div>
 </details>
 
-<p>These interests are still developing. My current priority is to gain more hands-on experience with machine learning and turn some of these questions into concrete experiments.</p>
+<p>For now, I am building practical machine learning experience through these projects and working toward experiments that can test some of these ideas.</p>
 
         </main>
     
