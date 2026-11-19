@@ -266,11 +266,11 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
 <h2 id="研究项目">研究项目</h2>
 <h3 id="memturn资源受限条件下的智能体持续学习">MemTurn：资源受限条件下的智能体持续学习</h3>
 <p><em>探索性研究 · 进行中</em></p>
-<p>我正在通过 MemTurn 探索记忆和算力有限时，智能体如何从经验中持续学习。原型代码、文档和离线测试已公开，目前正在准备对照实验，比较不同方法在连续任务中的表现，以及早期经验能否持续发挥作用。</p>
+<p>当记忆空间和算力有限时，过去的经验能在多大程度上帮助智能体处理熟悉的任务，或解决新问题？为研究这个问题，我开发了 MemTurn，并为几种记忆方法实现了比较接口，使它们可以在相同的存储上限下接受评估。我用三个数据库探索任务验证了其中一种方法 ReHarness 能够检索和修订先前的反思记录，并在程序重启后恢复这些记录。接下来，我计划在 Database Exploration 和 ScienceWorld 两个环境中比较各方法在较长任务序列上的表现。</p>
 <p><a href="https://github.com/RuneTan/MemTurn">MemTurn（GitHub）</a></p>
 <h3 id="面向-lhc-的-smeft-事件生成智能体-ai-工作流">面向 LHC 的 SMEFT 事件生成：智能体 AI 工作流</h3>
 <p><em>硕士论文项目 · 进行中 · 导师：Wouter Verkerke 教授，Nikhef / 阿姆斯特丹大学</em></p>
-<p>我搭建了一套用于 SMEFT 事件生成的智能体工作流，并做了门控消融实验。前期调研时，我还编写了一份从 SMEFTsim 事件生成到探测器模拟的教程。</p>
+<p>我用 LangGraph 搭建了一个智能体，可以根据物理需求调用 MadGraph 生成事例样本并绘制运动学分布。如果衰变产物等物理设定不明确，智能体会向用户询问，再核对生成配置与输出。在一组本地对照实验中，我选取九道开发阶段用过的题目，每题选取三个随机种子，在开启和关闭校验的两种配置下逐一配对运行。开启校验的 27 次运行全部通过独立评分，关闭校验后有 22 次通过。另一次测试由模拟用户参与交互，17 道题中有 16 道交付的样本和图均符合要求，剩余一道因生成的事例数不足而未交付。</p>
 <p><a href="https://github.com/RuneTan/simulations-single-agentic-workflow">模拟工作流（GitHub）</a> · <a href="https://github.com/RuneTan/smeftsim-to-detector-tutorial">SMEFTsim 到探测器模拟教程</a></p>
 <h2 id="其他研究兴趣">其他研究兴趣</h2>
 <details class="research-interest">
