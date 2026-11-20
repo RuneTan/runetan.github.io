@@ -266,11 +266,11 @@ html[data-theme="dark"] .taiji .eye { fill: #212529; }
 <h2 id="research-projects">Research Projects</h2>
 <h3 id="memturn-continual-learning-in-resource-constrained-agents">MemTurn: Continual Learning in Resource-Constrained Agents</h3>
 <p><em>Exploratory research · In progress</em></p>
-<p>When an agent has limited memory and compute, how much can earlier experience help it solve a familiar task or tackle a new one? I built MemTurn to study this question and implemented interfaces for comparing it with other memory methods under a common storage limit. In a three-task Database Exploration pilot, I verified that one baseline, ReHarness, could retrieve and revise earlier reflections and recover them after a restart. Longer comparisons on Database Exploration and ScienceWorld are planned.</p>
+<p>I designed three metrics to evaluate continual learning under fixed memory and compute budgets. Cumulative utility (<em>U_H</em>) sums the scores of tasks completed on time. <em>G_old</em> and <em>G_new</em> measure how prior experience affects adaptation to familiar and unseen task families, respectively, given the same amount of feedback.</p>
 <p><a href="https://github.com/RuneTan/MemTurn">MemTurn (GitHub)</a></p>
 <h3 id="agentic-ai-workflows-for-smeft-event-generation-at-the-lhc">Agentic AI Workflows for SMEFT Event Generation at the LHC</h3>
 <p><em>MSc thesis · In progress · Advisor: Prof. Wouter Verkerke, Nikhef / University of Amsterdam</em></p>
-<p>I built a LangGraph agent that turns a physics request into a MadGraph event sample and kinematic plots. It asks the user to clarify choices such as which particles should appear in a decay, then checks the generator settings and output. In a local thesis experiment on nine development tasks with three matched seeds each, an independent scorer accepted 27 of 27 runs with checks enabled and 22 of 27 with them disabled. In a separate interactive test with a simulated user, the samples and plots met the requirements for 16 of 17 tasks. The workflow withheld the remaining sample because it contained too few events.</p>
+<p>I built a MadGraph workflow for parton-level event generation. Ablation experiments showed that validation gates improved its task success rate. Using ATLAS Monte Carlo job options, I designed a 17-task benchmark on which the workflow achieved a 94.1% success rate with a simulated user.</p>
 <p><a href="https://github.com/RuneTan/simulations-single-agentic-workflow">Simulation workflow (GitHub)</a> · <a href="https://github.com/RuneTan/smeftsim-to-detector-tutorial">SMEFTsim-to-detector tutorial</a></p>
 <h2 id="other-research-interests">Other Research Interests</h2>
 <details class="research-interest">
